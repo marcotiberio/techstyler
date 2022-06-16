@@ -1,0 +1,91 @@
+/* Custom styling for page events */
+
+.page-events {
+  .mainContent {
+    height: auto;
+    min-height: calc(100vh - 140px);
+
+    .section-title {
+      border-bottom: 1px solid $black;
+      margin: 0;
+      padding: $spacing-small 0;
+      text-transform: uppercase;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+
+    .list-events {
+      @include reset-list;
+      width: 100%;
+
+      &-item {
+        border-bottom: 1px solid $black;
+        padding: $spacing-small 0;
+        row-gap: $spacing-small;
+
+        &-link {
+          column-gap: $spacing-small;
+          display: grid;
+          grid-auto-rows: auto;
+          grid-template-columns: repeat(4, 1fr);
+          text-decoration: none;
+          width: 100%;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @media (max-width: $breakpoint-mobile-horizontal) {
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: 1fr;
+          }
+
+          .date {
+            grid-column-end: 2;
+            grid-column-start: 1;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 2;
+              grid-column-start: 1;
+              grid-row-end: 2;
+              grid-row-start: 1;
+            }
+          }
+
+          .title {
+            grid-column-end: 4;
+            grid-column-start: 2;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 2;
+              grid-column-start: 1;
+              grid-row-end: 3;
+              grid-row-start: 2;
+            }
+          }
+    
+          .venue {
+            grid-column-end: 6;
+            grid-column-start: 4;
+            padding-left: $spacing-small;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 3;
+              grid-column-start: 2;
+              grid-row-end: 2;
+              grid-row-start: 1;
+            }
+          }
+        }
+
+        p {
+          margin-bottom: 0;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

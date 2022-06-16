@@ -1,0 +1,58 @@
+/* Custom styling for page podcast */
+
+.page-podcasts {
+  .mainContent {
+    height: auto;
+    min-height: calc(100vh - 140px);
+
+    .list-podcasts {
+      @include reset-list;
+      column-gap: $spacing-small;
+      display: grid;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: $spacing-small;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        row-gap: $spacing-small;
+      }
+
+      &-item {
+        &:hover {
+          img {
+            opacity: 0;
+          }
+        }
+
+        a {
+          text-decoration: none;
+        }
+        
+        .title {
+          text-transform: uppercase;
+        }
+      }
+
+      figcaption {
+        display: none;
+      }
+    }
+
+    .featuredImage {
+      background-position: center;
+      background-repeat: repeat;
+      background-size: cover;
+
+      img {
+        transition: all 0.1s linear;
+      }
+
+      // .flyntComponent:last-child {
+      //   margin-bottom: 0;
+      // }
+    }
+  }
+}
