@@ -1,0 +1,85 @@
+.overlay {
+  .logo-image {
+    filter: invert(1);
+  }
+
+  &-toggle {
+    font-size: 1rem;
+    left: calc(50vw - 85px);
+    position: fixed;
+    text-align: right;
+    text-transform: uppercase;
+    top: $spacing-large;
+    width: 60px;
+    z-index: 1001;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      left: auto;
+      right: $spacing-small;
+      top: $spacing-small;
+    }
+  }
+
+  &-close {
+    display: none;
+    font-size: 1rem;
+    left: calc(50vw - 85px);
+    position: fixed;
+    text-align: right;
+    text-transform: uppercase;
+    top: $spacing-large;
+    width: 60px;
+    z-index: 1003;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      left: auto;
+      right: $spacing-small;
+      top: $spacing-small;
+    }
+  }
+
+  &-about {
+    background-color: $green;
+    color: $white;
+    display: none;
+    font-size: 2rem;
+    height: 100vh;
+    left: 0;
+    padding: $spacing-large;
+    position: fixed;
+    top: 0;
+    width: 50vw;
+    z-index: 1002;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      bottom: 0;
+      height: 100vh;
+      top: auto;
+      width: 100vw;
+    }
+
+    .text {
+      margin-top: 200px;
+      padding: 0 $spacing-large*2;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-top: 90px;
+        padding: 0;
+      }
+
+      .text {
+        font-size: 2rem;
+      }
+    }
+  }
+}

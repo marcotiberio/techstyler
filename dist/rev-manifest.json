@@ -20,7 +20,8 @@
   "Components/NavigationFooterColumns/Assets/xing.svg": "Components/NavigationFooterColumns/Assets/xing-b8ecedbab7.svg",
   "Components/NavigationFooterColumns/Assets/youtube.svg": "Components/NavigationFooterColumns/Assets/youtube-3b8f2b7f41.svg",
   "Components/NavigationMain/Assets/logo.svg": "Components/NavigationMain/Assets/logo-4627cdfa7d.svg",
-  "assets/admin.css": "assets/admin-6de522ed27.css",
+  "Components/SliderImagesLanding/Assets/logo.svg": "Components/SliderImagesLanding/Assets/logo-4627cdfa7d.svg",
+  "assets/admin.css": "assets/admin-ef38dba152.css",
   "assets/admin.js": "assets/admin-7d78182351.js",
   "assets/admin.js.LICENSE.txt": "assets/admin-23200fb757.js.LICENSE.txt",
   "assets/fonts/Theinhardt-Regular.woff2": "assets/fonts/Theinhardt-Regular-549dfe6a9f.woff2",
@@ -34,7 +35,7 @@
   "assets/fonts/montserrat-v14-latin-regular.woff2": "assets/fonts/montserrat-v14-latin-regular-bc3aa95dca.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-6b9cbce6dc.css",
-  "assets/main.js": "assets/main-87f1d2804b.js",
+  "assets/main.css": "assets/main-1b74026d26.css",
+  "assets/main.js": "assets/main-e0daae377e.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }

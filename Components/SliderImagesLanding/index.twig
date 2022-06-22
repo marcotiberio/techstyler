@@ -1,0 +1,46 @@
+<div class="flyntComponent" is="flynt-slider-images-landing">
+  <script type="application/json">{{ jsonData|json_encode }}</script>
+  <div class="container">
+    <div class="infoBox">
+      <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
+      <div class="infoBox--content">
+        <div class="text">{{ contentHtml|e('wp_kses_post')}}</div>
+        <div class="subscribe">
+          {% include 'Partials/_newsletter.twig' %}
+        </div>
+      </div>
+    </div>
+    <div data-slider class="slider swiper-container">
+      <div class="overlay-logo">
+        <svg width="430" height="431" viewBox="0 0 430 431" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M220.98 242.344H206.101V431H220.98V242.344ZM430 203.091H248.674L413.199 136.674L407.646 122.879L247.677 187.447L371.195 64.0704L360.659 53.5461L236.144 177.918L304.702 16.6398L291.033 10.8088L221.051 175.572V0H206.172V176.283L139.038 10.3821L125.227 15.9287L190.652 177.634L66.4222 53.6172L55.8858 64.1416L178.336 186.38L18.7947 118.754L12.957 132.408L179.689 203.091H0V217.953H430V203.091Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="swiper-wrapper">
+        {% for panel in repeaterSlider %}
+          <div class="slider-item swiper-slide">
+            <figure class="figure">
+              <img class="figure-image lazyload"
+                src="{{ panel.panelImage.src|resize(2560) }}"
+              {% if panelImage.caption %} >
+                <figcaption class="figure-caption">{{ panelImage.caption|e }}</figcaption>
+              {% endif %}
+            </figure>
+          </div>
+        {% endfor %}
+      </div>
+      {# <div class="slider-button-container">
+        <button type="button" data-slider-button="prev" class="slider-button slider-button--prev">
+          <i data-feather="arrow-left"></i>
+        </button>
+        <div data-slider-pagination class="slider-pagination swiper-pagination-fraction"></div>
+        <button type="button" data-slider-button="next" class="slider-button slider-button--next">
+          <i data-feather="arrow-right"></i>
+        </button>
+      </div> #}
+    </div>
+  </div>
+  <div class="overlay">
+    {% include 'Partials/_about.twig' %}
+  </div>
+</div>

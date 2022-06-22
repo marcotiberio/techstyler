@@ -4,6 +4,31 @@
 * Top level styles every element should inherit.
 */
 
+/* clears the 'X' from Internet Explorer */
+[type='search'] {
+  &::-ms-clear {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  &::-ms-reveal {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
+
+/* clears the 'X' from Chrome */
+[type='search'] {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
 #cookie-law-info-bar[data-cli-style='cli-style-v2'] {
   border-top: 1px solid $black;
   box-shadow: none;

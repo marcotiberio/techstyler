@@ -1,0 +1,57 @@
+.form--newsletter {
+  margin-top: $spacing-large*2;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    margin-top: $spacing-large;
+  }
+
+  .group-submit {
+    display: flex;
+    font-size: 20px;
+    justify-content: flex-start;
+
+    input {
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .button {
+      background-color: $white;
+      border-radius: 0;
+      color: $black;
+      font-size: 20px;
+      margin-left: $spacing-large;
+      padding: 0 $spacing-large;
+  
+      &:hover,
+      &:focus {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
+.wpcf7-form {
+  &.invalid .wpcf7-response-output {
+    border-color: $orange;
+    margin: $spacing-large 0;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .wpcf7-response-output {
+    border-color: $lime;
+    margin: $spacing-large 0;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  color: $orange;
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+}

@@ -17,3 +17,15 @@ $(document).ready(function () {
     e.preventDefault()
   })
 })
+
+$(document).ready(function () {
+  $('.accessibility-toggle').click(function () {
+    $('.accessibility-content').toggle()
+  })
+  $('.accessibility-content--blackWhite').click(function () {
+    $('html').toggleClass('black-and-white')
+  })
+  $('.accessibility-content--fontSize').click(function () {
+    $('html').toggleClass('font-bigger')
+  })
+})

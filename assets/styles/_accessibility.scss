@@ -1,0 +1,58 @@
+/**
+* 5.0 Accessibility
+*
+* Accessibility styling.
+*/
+
+.accessibility {
+  z-index: 1005;
+  
+  &-toggle {
+    bottom: 10vh;
+    left: 0;
+    position: fixed;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      bottom: 15vh;
+    }
+  }
+
+  &-content {
+    bottom: 10vh;
+    display: none;
+    left: 15vw;
+    position: fixed;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      bottom: 15vh;
+      left: 20vw;
+    }
+
+    &--blackWhite {
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+
+    &--fontSize {
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.black-and-white {
+  filter: grayscale(100%);
+}
+
+.font-bigger {
+  font-size: 18px;
+}

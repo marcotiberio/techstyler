@@ -11,6 +11,18 @@ function getACFLayout()
         'label' => 'List: Social',
         'sub_fields' => [
             [
+                'label' => __('General', 'flynt'),
+                'name' => 'generalTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Title', 'flynt'),
+                'name' => 'title',
+                'type' => 'text'
+            ],
+            [
                 'label' => __('Socials', 'flynt'),
                 'name' => 'socialTab',
                 'type' => 'tab',

@@ -8,7 +8,7 @@ import 'core-js/es/number'
 import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
 import 'swiper/swiper-bundle.css'
 import smoothscroll from 'smoothscroll-polyfill'
-import './scripts/scroll.js'
+import './scripts/custom.js'
 import './scripts/filters.js'
 import './scripts/navigation.js'
 
@@ -46,6 +46,6 @@ smoothscroll.polyfill()
 // })
 
 importAll(require.context('../Components/', true, /\/script\.js$/))
-require.resolve('./scripts/scroll.js')
+require.resolve('./scripts/custom.js')
 require.resolve('./scripts/filters.js')
 require.resolve('./scripts/navigation.js')

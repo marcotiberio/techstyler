@@ -11,7 +11,7 @@ html {
   box-sizing: border-box;
   color: $color-text;
   font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
@@ -19,8 +19,11 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
   scroll-behavior: smooth;
-  transition: all 1s linear;
-  word-wrap: break-word;
+  // transition: all 0.2s linear;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    font-size: 12px;
+  }
 
 
   *,
@@ -146,7 +149,7 @@ p,
 .paragraph,
 table,
 figure {
-  margin: 0 0 $spacing-small;
+  margin: 0 0 2.25rem;
 }
 
 hr {
@@ -503,7 +506,7 @@ input,
 select,
 textarea {
   margin: 0 0 1rem;
-  padding: 10px 20px;
+  padding: 5px 0;
 
   &:focus {
     outline: none;
@@ -585,6 +588,11 @@ select {
   }
 }
 
+[type='email'] {
+  border-bottom: 1px solid $black;
+  min-height: 20px;
+}
+
 /**
 * 2.0 Helpers
 *
@@ -623,18 +631,10 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
-  margin-top: 120px;
-  min-height: calc(100vh - 140px);
-  padding-top: $spacing-small;
-
-  @media (max-width: $breakpoint-tablet-horizontal) {
-    margin-top: 0;
-    padding-top: 70px;
-  }
 }
 
 .flyntComponent {
-  padding-top: $spacing-small;
+  padding: $spacing-small 0;
   position: relative;
 
   &:first-child {

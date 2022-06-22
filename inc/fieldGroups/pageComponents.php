@@ -21,6 +21,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockWysiwygTwoCol\getACFLayout(),
                     Components\GridPostsArtistSelector\getACFLayout(),
                     Components\ListLogos\getACFLayout(),
+                    Components\ListSocial\getACFLayout(),
+                    Components\SliderImagesLanding\getACFLayout(),
                 ]
             ]
         ],
