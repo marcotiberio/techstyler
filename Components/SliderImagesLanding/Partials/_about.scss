@@ -1,8 +1,4 @@
 .overlay {
-  .logo-image {
-    filter: invert(1);
-  }
-
   &-toggle {
     font-size: 1rem;
     left: calc(50vw - 85px);
@@ -49,11 +45,14 @@
   }
 
   &-about {
+    align-items: center;
     background-color: $green;
     color: $white;
     display: none;
+    flex-flow: column;
     font-size: 2rem;
     height: 100vh;
+    justify-content: center;
     left: 0;
     padding: $spacing-large;
     position: fixed;
@@ -69,11 +68,9 @@
     }
 
     .text {
-      margin-top: 200px;
       padding: 0 $spacing-large*2;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        margin-top: 90px;
         padding: 0;
       }
 

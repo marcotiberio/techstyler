@@ -29,3 +29,16 @@ $(document).ready(function () {
     $('html').toggleClass('font-bigger')
   })
 })
+
+$(document).ready(function () {
+  $('.overlay-toggle').click(function () {
+    $('.logo-image').css({
+      filter: 'invert(1)'
+    })
+  })
+  $('.overlay-close').click(function () {
+    $('.logo-image').css({
+      filter: 'invert(0)'
+    })
+  })
+})

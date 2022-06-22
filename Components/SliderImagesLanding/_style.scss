@@ -14,7 +14,11 @@
   }
 
   .infoBox {
+    align-items: center;
     background-color: $white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     padding: $spacing-large;
     width: 50%;
 
@@ -29,11 +33,9 @@
     }
 
     &--content {
-      margin-top: 200px;
       padding: 0 $spacing-large*2;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        margin-top: 90px;
         padding: 0;
       }
 
@@ -157,6 +159,11 @@
     @media (max-width: $breakpoint-tablet-horizontal) {
       display: none;
     }
+  }
+
+  .showFlex {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   @import 'Partials/newsletter';

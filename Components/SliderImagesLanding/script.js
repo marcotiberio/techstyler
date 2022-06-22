@@ -70,12 +70,12 @@ class SliderImagesLanding extends window.HTMLDivElement {
   }
 
   toggleAbout (e) {
-    this.$about.toggle()
+    this.$about.css('display', 'flex')
     this.$closeAbout.toggle()
   }
 
   closeAbout (e) {
-    this.$about.toggle()
+    this.$about.css('display', 'none')
     this.$closeAbout.toggle()
   }
 }

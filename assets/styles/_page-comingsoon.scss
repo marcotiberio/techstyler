@@ -1,7 +1,8 @@
 /* Custom styling for homepage */
 
 .page-coming-soon {
-  .mainHeader,
+  .mainHeader .wrapper,
+  .mainHeader .container,
   .mainFooter {
     display: none;
   }

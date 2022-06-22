@@ -601,12 +601,12 @@ select {
 
 .mainHeader {
   @media (min-width: $breakpoint-tablet-horizontal + 1) {
-    left: 0;
+    left: $spacing-large;
     position: fixed;
-    top: 0;
+    top: $spacing-large;
     transition: all 0.25s linear;
-    width: 100%;
-    z-index: 1000;
+    width: auto;
+    z-index: 1010;
 
     &Out {
       transform: translateY(-132px);
