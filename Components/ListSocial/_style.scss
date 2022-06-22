@@ -41,9 +41,11 @@
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         flex-flow: row nowrap;
+        justify-content: space-between;
       }
 
       li {
+        font-size: 14px;
         margin-right: $spacing-large;
 
         a {
