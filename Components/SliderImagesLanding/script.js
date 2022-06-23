@@ -34,8 +34,8 @@ class SliderImagesLanding extends window.HTMLDivElement {
     this.$buttonPrev = $('[data-slider-button="prev"]', this)
 
     this.$buttonAbout = $('.overlay-toggle', this)
-    this.$about = $('.overlay-about', this)
     this.$closeAbout = $('.overlay-close', this)
+    this.$about = $('.overlay-about', this)
   }
 
   bindFunctions () {

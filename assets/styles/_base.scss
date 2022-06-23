@@ -4,13 +4,20 @@
 * Top level styles every element should inherit.
 */
 
-@include font-face('Theinhardt', 'Theinhardt-Regular', '400', 'normal');
+@include font-face('Rhetorik Sans Regular', 'RhetorikSansRegular', '400', 'normal');
+@include font-face('Rhetorik Sans Italic', 'RhetorikSansItalic', '400', 'italic');
+@include font-face('Rhetorik Sans Light', 'RhetorikSansLight', '400', 'normal');
+@include font-face('Rhetorik Sans Light Italic', 'RhetorikSansLightItalic', '300', 'italic');
+@include font-face('Rhetorik Sans Medium', 'RhetorikSansMedium', '400', 'normal');
+@include font-face('Rhetorik Sans Medium Italic', 'RhetorikSansMediumItalic', '500', 'italic');
+@include font-face('Rhetorik Serif Regular', 'RhetorikSerifRegular', '400', 'normal');
+@include font-face('Rhetorik Serif Italic', 'RhetorikSerifItalic', '400', 'italic');
 
 html {
   background-color: $color-background;
   box-sizing: border-box;
   color: $color-text;
-  font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+  font-family: 'Rhetorik Sans Regular', sans-serif;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -150,6 +157,10 @@ p,
 table,
 figure {
   margin: 0 0 2.25rem;
+}
+
+.small {
+  font-size: 1.25rem;
 }
 
 hr {

@@ -1,12 +1,12 @@
 .overlay {
   &-toggle {
     font-size: 1rem;
-    left: calc(50vw - 85px);
+    left: calc(50vw - 105px);
     position: fixed;
-    text-align: right;
+    text-align: left;
     text-transform: uppercase;
-    top: $spacing-large;
-    width: 60px;
+    top: 40px;
+    width: fit-content;
     z-index: 1001;
 
     &:hover,
@@ -24,12 +24,12 @@
   &-close {
     display: none;
     font-size: 1rem;
-    left: calc(50vw - 85px);
+    left: calc(50vw - 80px);
     position: fixed;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
-    top: $spacing-large;
-    width: 60px;
+    top: 40px;
+    width: fit-content;
     z-index: 1003;
 
     &:hover,

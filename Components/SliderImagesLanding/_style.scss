@@ -24,12 +24,13 @@
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       height: 50vh;
+      padding: $spacing-large*2 $spacing-large $spacing-large $spacing-large;
       width: 100%;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       height: 55vh;
-      padding: $spacing-small;
+      padding: $spacing-large*2 $spacing-small $spacing-large $spacing-small;
     }
 
     &--content {
