@@ -35,14 +35,14 @@
 
 .wpcf7-form {
   &.invalid .wpcf7-response-output {
-    border-color: $orange;
+    border-color: $orange !important;
     margin: $spacing-large 0;
     padding: 5px;
     text-align: center;
   }
 
   .wpcf7-response-output {
-    border-color: $lime;
+    border-color: $lime !important;
     margin: $spacing-large 0;
     padding: 5px;
     text-align: center;
@@ -54,4 +54,6 @@
   display: block;
   font-size: 1rem;
   font-weight: normal;
+  padding-left: 10px;
+  padding-top: 10px;
 }
