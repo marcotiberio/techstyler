@@ -7,7 +7,7 @@
     text-transform: uppercase;
     top: 40px;
     width: fit-content;
-    z-index: 1001;
+    z-index: 1011;
 
     &:hover,
     &:focus {
@@ -22,7 +22,7 @@
   }
 
   &-close {
-    display: none;
+    display: block;
     font-size: 1rem;
     left: calc(50vw - 80px);
     position: fixed;
@@ -38,9 +38,16 @@
     }
 
     @media (max-width: $breakpoint-tablet-horizontal) {
+      align-items: flex-start;
+      background-color: $green;
+      display: flex;
+      height: 70px;
+      justify-content: center;
       left: auto;
-      right: $spacing-small;
-      top: $spacing-small;
+      padding-top: $spacing-small;
+      right: 0;
+      top: 0;
+      width: 10%;
     }
   }
 
@@ -78,7 +85,7 @@
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         margin-top: $spacing-large*3;
-        padding: 0;
+        padding: 0 0 $spacing-large*2;
       }
     }
 

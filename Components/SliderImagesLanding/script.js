@@ -33,19 +33,19 @@ class SliderImagesLanding extends window.HTMLDivElement {
     this.$buttonNext = $('[data-slider-button="next"]', this)
     this.$buttonPrev = $('[data-slider-button="prev"]', this)
 
-    this.$buttonAbout = $('.overlay-toggle', this)
-    this.$closeAbout = $('.overlay-close', this)
-    this.$about = $('.overlay-about', this)
+    // this.$buttonAbout = $('.overlay-toggle', this)
+    // this.$closeAbout = $('.overlay-close', this)
+    // this.$about = $('.overlay-about', this)
   }
 
   bindFunctions () {
-    this.toggleAbout = this.toggleAbout.bind(this)
-    this.closeAbout = this.closeAbout.bind(this)
+    // this.toggleAbout = this.toggleAbout.bind(this)
+    // this.closeAbout = this.closeAbout.bind(this)
   }
 
   bindEvents () {
-    this.$buttonAbout.on('click', this.toggleAbout)
-    this.$closeAbout.on('click', this.closeAbout)
+    // this.$buttonAbout.on('click', this.toggleAbout)
+    // this.$closeAbout.on('click', this.closeAbout)
   }
 
   connectedCallback () {
@@ -69,15 +69,15 @@ class SliderImagesLanding extends window.HTMLDivElement {
     this.slider = new Swiper(this.$slider.get(0), config)
   }
 
-  toggleAbout (e) {
-    this.$about.css('display', 'flex')
-    this.$closeAbout.toggle()
-  }
+  // toggleAbout (e) {
+  //   this.$about.css('display', 'flex')
+  //   this.$closeAbout.toggle()
+  // }
 
-  closeAbout (e) {
-    this.$about.css('display', 'none')
-    this.$closeAbout.toggle()
-  }
+  // closeAbout (e) {
+  //   this.$about.css('display', 'none')
+  //   this.$closeAbout.toggle()
+  // }
 }
 
 window.customElements.define('flynt-slider-images-landing', SliderImagesLanding, { extends: 'div' })

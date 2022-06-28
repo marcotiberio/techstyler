@@ -8,11 +8,13 @@
 
 [is='flynt-navigation-burger'] {
   $navigation-height: 70px;
-  left: $spacing-small;
+  background-color: $white;
+  left: 0;
+  padding: $spacing-small !important;
   position: fixed;
   right: auto;
-  top: $spacing-small;
-  width: auto;
+  top: 0;
+  width: 100%;
   z-index: 1010;
 
   @media (min-width: $breakpoint-tablet-horizontal) {

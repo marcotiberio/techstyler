@@ -32,13 +32,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.overlay-toggle').click(function () {
-    $('.logo-image').css({
-      filter: 'invert(1)'
-    })
+    $('.pageWrapper').toggleClass('about-open')
+    $('.overlay-toggle').toggle()
+    $('.overlay-about').toggle()
   })
   $('.overlay-close').click(function () {
-    $('.logo-image').css({
-      filter: 'invert(0)'
-    })
+    $('.pageWrapper').toggleClass('about-open')
+    $('.overlay-toggle').toggle()
+    $('.overlay-about').toggle()
   })
 })

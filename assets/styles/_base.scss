@@ -612,9 +612,9 @@ select {
 
 .mainHeader {
   @media (min-width: $breakpoint-tablet-horizontal + 1) {
-    left: $spacing-large;
+    left: 0;
     position: fixed;
-    top: $spacing-large;
+    top: 0;
     transition: all 0.25s linear;
     width: auto;
     z-index: 1010;
@@ -638,7 +638,24 @@ select {
       padding-top: 32px;
     }
   }
+
+  &.about-open {
+    .navMain {
+      background-color: $green;
+    }
+
+    .navBurger {
+      background-color: $green;
+      width: 90%;
+    }
+
+    .logo-image {
+      filter: invert(1);
+    }
+  }
 }
+
+
 
 .mainContent {
   flex: 1 0 auto;

@@ -4,11 +4,13 @@
   display: none;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
+    background-color: $white;
     display: block;
     left: 0;
+    padding: $spacing-large !important;
     position: relative;
     top: 0;
-    width: 100%;
+    width: calc(50vw - 90px);
     z-index: 1000;
   }
 
