@@ -52,7 +52,7 @@
     flex-flow: column;
     font-size: 2rem;
     height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     left: 0;
     padding: $spacing-large;
     position: fixed;
@@ -63,19 +63,24 @@
     @media (max-width: $breakpoint-tablet-horizontal) {
       bottom: 0;
       height: 100vh;
+      padding: $spacing-large*2 $spacing-large $spacing-large $spacing-large;
       top: auto;
       width: 100vw;
     }
 
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding: $spacing-large $spacing-small $spacing-large $spacing-small;
+    }
+
     .text {
-      padding: 0 $spacing-large*2;
+      font-size: 1.5rem;
+      margin-top: 20vh;
+      overflow-y: scroll;
+      padding: 0 $spacing-large*2 $spacing-large;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-top: $spacing-large*2;
         padding: 0;
-      }
-
-      .text {
-        font-size: 2rem;
       }
     }
   }

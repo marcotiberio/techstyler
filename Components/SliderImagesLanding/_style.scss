@@ -18,12 +18,13 @@
     background-color: $white;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: $spacing-large;
     width: 50%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       height: 50vh;
+      justify-content: center;
       padding: $spacing-large*2 $spacing-large $spacing-large $spacing-large;
       width: 100%;
     }
@@ -41,7 +42,12 @@
       }
 
       .text {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-top: 20vh;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          margin-top: $spacing-large;
+        }
       }
     }
   }
@@ -125,17 +131,27 @@
       width: 100%;
     }
 
-    // &-caption {
-    //   background: rgba($color-background-dark, 0.5);
-    //   bottom: 0;
-    //   color: $color-background-light;
-    //   display: inline-block;
-    //   font-size: 0.8rem;
-    //   max-width: 450px;
-    //   padding: 0.25rem 0.5rem;
-    //   position: absolute;
-    //   right: 0;
-    // }
+    &-caption {
+      bottom: $spacing-large*2;
+      color: $white;
+      display: inline-block;
+      font-size: 14px;
+      padding: 0;
+      position: absolute;
+      right: 20px;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        bottom: auto;
+        right: $spacing-small;
+        top: 42.5vh;
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        bottom: auto;
+        right: $spacing-small;
+        top: 35vh;
+      }
+    }
   }
 
   .logo-image {
@@ -159,6 +175,10 @@
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       display: none;
+    }
+
+    svg {
+      width: 25vw;
     }
   }
 

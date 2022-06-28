@@ -12,8 +12,11 @@
     </div>
     <div data-slider class="slider swiper-container">
       <div class="overlay-logo">
-        <svg width="430" height="431" viewBox="0 0 430 431" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M220.98 242.344H206.101V431H220.98V242.344ZM430 203.091H248.674L413.199 136.674L407.646 122.879L247.677 187.447L371.195 64.0704L360.659 53.5461L236.144 177.918L304.702 16.6398L291.033 10.8088L221.051 175.572V0H206.172V176.283L139.038 10.3821L125.227 15.9287L190.652 177.634L66.4222 53.6172L55.8858 64.1416L178.336 186.38L18.7947 118.754L12.957 132.408L179.689 203.091H0V217.953H430V203.091Z" fill="white"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1449" height="1448.4" viewBox="0 0 1449 1448.4">
+          <g id="_220627_TS_Icon_white" data-name="220627_TS_Icon_white" transform="translate(-275.6 -287)">
+            <path id="Path_1" data-name="Path 1" d="M1091,858.8,1287.2,346l-18.5-7.6-223.8,501c-5.4,13.1-19.4,9.1-19.4-4l-15-548.4h-20l-15,548.1c0,12.4-15,15.4-19.6,3.8L732.3,338.4,713.8,346,909.6,857.8C914,870,902,878,892.8,869L494.9,492.3l-14.1,14.1L857.4,904.3c9.6,9.7.6,21.7-11.2,16.7L334.5,725.3l-7.6,18.5L827.1,967.2c12,4.8,10,18.8-3.8,19.3l-547.7,25v20h1449V1011l-548.7-24.5c-13.8-.5-15.8-13.5-3.6-18.5l501.6-224-7.6-18.5L1153.4,921.7c-13.2,5.3-20.2-6.7-10.8-16.3l377.6-398.8-14.1-14.2L1107.5,869.8c-9.5,9.2-21.5,1.2-16.5-11Z" fill="#fff"/>
+            <path id="Path_2" data-name="Path 2" d="M1025.5,1116.3h-50l15,619.1h20Z" fill="#fff"/>
+          </g>
         </svg>
       </div>
       <div class="swiper-wrapper">
@@ -22,8 +25,8 @@
             <figure class="figure">
               <img class="figure-image lazyload"
                 src="{{ panel.panelImage.src|resize(2560) }}"
-              {% if panelImage.caption %} >
-                <figcaption class="figure-caption">{{ panelImage.caption|e }}</figcaption>
+              {% if panel.panelImage.caption %} >
+                <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption>
               {% endif %}
             </figure>
           </div>
