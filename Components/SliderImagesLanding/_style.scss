@@ -23,15 +23,13 @@
     width: 50%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      height: 50vh;
-      justify-content: center;
-      padding: $spacing-large*2 $spacing-large $spacing-large $spacing-large;
+      height: fit-content;
+      padding: $spacing-large*3 $spacing-large $spacing-large $spacing-large;
       width: 100%;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
-      height: 55vh;
-      padding: $spacing-large*2 $spacing-small $spacing-large $spacing-small;
+      padding: $spacing-large*3 $spacing-small $spacing-large $spacing-small;
     }
 
     &--content {
@@ -46,7 +44,7 @@
         margin-top: 20vh;
 
         @media (max-width: $breakpoint-tablet-horizontal) {
-          margin-top: $spacing-large;
+          margin-top: 0;
         }
       }
     }
@@ -57,12 +55,9 @@
     width: 50%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      height: 50vh;
-      width: 100%;
-    }
-
-    @media (max-width: $breakpoint-mobile-horizontal) {
+      flex-grow: 1;
       height: 45vh;
+      width: 100%;
     }
 
     &-item {
@@ -70,6 +65,10 @@
       overflow: hidden;
       // padding-bottom: (6/9) * 100%;
       position: relative;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        height: auto;
+      }
     }
 
     // &-button-container {
@@ -117,12 +116,13 @@
   }
 
   .figure {
-    bottom: 0;
-    left: 0;
+    // bottom: 0;
+    // left: 0;
+    height: 100%;
     margin-bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    // position: absolute;
+    // right: 0;
+    // top: 0;
 
     &-image {
       height: 100%;
@@ -132,24 +132,20 @@
     }
 
     &-caption {
-      bottom: $spacing-large*2;
+      bottom: 0;
       color: $white;
       display: inline-block;
       font-size: 14px;
-      padding: 0;
+      margin: 0;
+      padding: $spacing-large*2 20px;
       position: absolute;
-      right: 20px;
+      right: 0;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         bottom: auto;
-        right: $spacing-small;
-        top: 42.5vh;
-      }
-
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        bottom: auto;
-        right: $spacing-small;
-        top: 35vh;
+        padding: $spacing-small;
+        right: 0;
+        top: 0;
       }
     }
   }

@@ -128,19 +128,26 @@ function getACFLayout()
                 'endpoint' => 0
             ],
             [
-                'label' => __('Contact Form 7 Form', 'flynt'),
-                'name' => 'formId',
-                'type' => 'post_object',
-                'post_type' => [
-                    'wpcf7_contact_form'
-                ],
-                'allow_null' => 0,
-                'multiple' => 0,
-                'return_format' => 'id',
-                'ui' => 1,
-                'required' => 0,
-                'instructions' => __('If there is no form available, please first create a suitable one in the <a href="' . admin_url('admin.php?page=wpcf7') . '" target="_blank">Contact Form 7 admin page</a>.', 'flynt'),
+                'label' => __('Newsletter', 'flynt'),
+                'name' => 'newsletterShortcode',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'media_upload' => 0,
             ],
+            // [
+            //     'label' => __('Contact Form 7 Form', 'flynt'),
+            //     'name' => 'formId',
+            //     'type' => 'post_object',
+            //     'post_type' => [
+            //         'wpcf7_contact_form'
+            //     ],
+            //     'allow_null' => 0,
+            //     'multiple' => 0,
+            //     'return_format' => 'id',
+            //     'ui' => 1,
+            //     'required' => 0,
+            //     'instructions' => __('If there is no form available, please first create a suitable one in the <a href="' . admin_url('admin.php?page=wpcf7') . '" target="_blank">Contact Form 7 admin page</a>.', 'flynt'),
+            // ],
             [
                 'label' => __('Slider', 'flynt'),
                 'name' => 'sliderTab',

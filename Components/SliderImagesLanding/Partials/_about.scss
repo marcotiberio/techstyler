@@ -54,6 +54,7 @@
     height: 100vh;
     justify-content: flex-start;
     left: 0;
+    overflow-y: scroll;
     padding: $spacing-large;
     position: fixed;
     top: 0;
@@ -61,27 +62,28 @@
     z-index: 1002;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      bottom: 0;
       height: 100vh;
-      padding: $spacing-large*2 $spacing-large $spacing-large $spacing-large;
-      top: auto;
+      padding: 0 $spacing-large $spacing-large*2 $spacing-large;
       width: 100vw;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
-      padding: $spacing-large $spacing-small $spacing-large $spacing-small;
+      padding: 0 $spacing-small $spacing-large*2 $spacing-small;
     }
 
     .text {
       font-size: 1.5rem;
       margin-top: 20vh;
-      overflow-y: scroll;
       padding: 0 $spacing-large*2 $spacing-large;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        margin-top: $spacing-large*2;
+        margin-top: $spacing-large*3;
         padding: 0;
       }
+    }
+
+    a {
+      color: $white;
     }
   }
 }
