@@ -17,11 +17,15 @@
 
     &-listSocial {
       bottom: 0;
-      padding: $spacing-small;
+      padding: 10px;
       position: fixed;
       right: 0;
       width: 100vw;
       z-index: 1004;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        padding: 10px 15px;
+      }
     }
   }
 }

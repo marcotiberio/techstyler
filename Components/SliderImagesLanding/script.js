@@ -59,7 +59,9 @@ class SliderImagesLanding extends window.HTMLDivElement {
         nextEl: this.$buttonNext.get(0),
         prevEl: this.$buttonPrev.get(0)
       },
-      a11y: options.a11y
+      a11y: options.a11y,
+      speed: 1,
+      effect: 'fade'
     }
     if (options.autoplay && options.autoplaySpeed) {
       config.autoplay = {

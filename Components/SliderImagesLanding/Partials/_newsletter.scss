@@ -33,9 +33,9 @@
   border-top: 0 !important;
   color: $black;
   font-family: inherit;
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   margin: 0 !important;
-  padding: 7px 10px !important;
+  padding: 0 15px !important;
   width: 100%;
 }
 
@@ -44,7 +44,7 @@
   border: 1px solid $black;
   border-radius: 0;
   color: $black;
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   margin: 0 !important;
   text-align: center;
   text-decoration: none;
@@ -58,6 +58,7 @@
 
   span {
     padding: 0 !important;
+    transition: none !important;
   }
 }
 
@@ -70,7 +71,7 @@
 
   .group-submit {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     justify-content: flex-start;
 
     input {
@@ -83,7 +84,7 @@
       background-color: $white;
       border-radius: 0;
       color: $black;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-left: $spacing-large;
       padding: 0 $spacing-large;
   

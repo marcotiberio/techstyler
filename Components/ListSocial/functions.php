@@ -18,9 +18,13 @@ function getACFLayout()
                 'endpoint' => 0
             ],
             [
-                'label' => __('Title', 'flynt'),
-                'name' => 'title',
-                'type' => 'text'
+                'label' => __('Contact Link', 'flynt'),
+                'name' => 'contact',
+                'type' => 'link',
+                'return_format' => 'array',
+                'wrapper' => [
+                    'width' => '100',
+                ],
             ],
             [
                 'label' => __('Socials', 'flynt'),
@@ -28,6 +32,11 @@ function getACFLayout()
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
+            ],
+            [
+                'label' => __('Title', 'flynt'),
+                'name' => 'title',
+                'type' => 'text'
             ],
             [
                 'label' => __('Socials', 'flynt'),
