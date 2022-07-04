@@ -5,53 +5,76 @@
 */
 
 .accessibility {
-  display: none;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: $spacing-large;
+  transform: translateX(145px);
+  transition: transform 0.3s ease-in-out;
   z-index: 1005;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    display: none;
+  }
+
+  &.inView {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
   
   &-toggle {
-    bottom: 10vh;
-    left: 0;
-    position: fixed;
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    span {
+      padding: 0 10px;
+    }
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
 
     &:hover,
     &:focus {
       cursor: pointer;
     }
-
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      bottom: 15vh;
-    }
   }
 
   &-content {
-    bottom: 10vh;
-    display: none;
-    left: 15vw;
-    position: fixed;
+    display: block;
+    transform: translateX(40px);
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      bottom: 15vh;
-      left: 20vw;
-    }
+    &--inner {
+      align-items: center;
+      background-color: $white;
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
 
-    &--blackWhite {
-      &:hover,
-      &:focus {
-        cursor: pointer;
-      }
-    }
+      span {
+        margin: 0;
+        padding: 0 10px;
+        width: fit-content;
 
-    &--fontSize {
-      &:hover,
-      &:focus {
-        cursor: pointer;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
       }
     }
   }
 }
 
-.black-and-white {
+.high-contrast {
   filter: grayscale(100%);
+}
+
+.font-smaller {
+  font-size: 14px;
 }
 
 .font-bigger {

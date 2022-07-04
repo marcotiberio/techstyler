@@ -12,6 +12,8 @@
     &:hover,
     &:focus {
       cursor: pointer;
+      text-decoration-line: underline;
+      text-decoration-thickness: 1px;
     }
 
     @media (max-width: $breakpoint-tablet-horizontal) {
@@ -24,8 +26,8 @@
   &-close {
     display: block;
     font-size: 1rem;
-    left: calc(50vw - 80px);
     position: fixed;
+    right: $spacing-large;
     text-align: center;
     text-transform: uppercase;
     top: 40px;
@@ -35,6 +37,8 @@
     &:hover,
     &:focus {
       cursor: pointer;
+      text-decoration-line: underline;
+      text-decoration-thickness: 1px;
     }
 
     @media (max-width: $breakpoint-tablet-horizontal) {
@@ -65,7 +69,7 @@
     padding: $spacing-large;
     position: fixed;
     top: 0;
-    width: 50vw;
+    width: 100vw;
     z-index: 1002;
 
     @media (max-width: $breakpoint-tablet-horizontal) {

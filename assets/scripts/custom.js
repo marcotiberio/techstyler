@@ -20,13 +20,16 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.accessibility-toggle').click(function () {
-    $('.accessibility-content').toggle()
+    $('.accessibility').toggleClass('inView')
   })
-  $('.accessibility-content--blackWhite').click(function () {
-    $('html').toggleClass('black-and-white')
+  $('.blackWhite').click(function () {
+    $('html').toggleClass('high-contrast')
   })
-  $('.accessibility-content--fontSize').click(function () {
+  $('.fontSizebigger').click(function () {
     $('html').toggleClass('font-bigger')
+  })
+  $('.fontSizesmaller').click(function () {
+    $('html').toggleClass('font-smaller')
   })
 })
 

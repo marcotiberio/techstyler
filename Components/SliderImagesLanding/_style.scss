@@ -51,6 +51,16 @@
     }
   }
 
+  .swiper-wrapper {
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+  }
+
+  .swiper-slide {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
   .slider {
     position: relative;
     width: 50%;
