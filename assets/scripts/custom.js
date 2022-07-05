@@ -27,9 +27,11 @@ $(document).ready(function () {
   })
   $('.fontSizebigger').click(function () {
     $('html').toggleClass('font-bigger')
+    $('html').removeClass('font-smaller')
   })
   $('.fontSizesmaller').click(function () {
     $('html').toggleClass('font-smaller')
+    $('html').removeClass('font-bigger')
   })
 })
 
