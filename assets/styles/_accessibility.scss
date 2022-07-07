@@ -13,7 +13,7 @@
   transition: transform 0.3s ease-in-out;
   z-index: 1005;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-tablet-horizontal) {
     display: none;
   }
 

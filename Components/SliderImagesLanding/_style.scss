@@ -34,7 +34,7 @@
     }
 
     &--content {
-      padding: 0 $spacing-large*2;
+      padding: 0 $spacing-large*1.5;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         padding: 0;

@@ -39,11 +39,13 @@ $(document).ready(function () {
   $('.overlay-toggle').click(function () {
     $('.pageWrapper').toggleClass('about-open')
     $('.overlay-toggle').toggle()
+    $('.overlay-close').toggle()
     $('.overlay-about').toggle()
   })
   $('.overlay-close').click(function () {
     $('.pageWrapper').toggleClass('about-open')
     $('.overlay-toggle').toggle()
+    $('.overlay-close').toggle()
     $('.overlay-about').toggle()
   })
 })

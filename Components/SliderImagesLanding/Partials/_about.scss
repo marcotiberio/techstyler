@@ -24,7 +24,8 @@
   }
 
   &-close {
-    display: block;
+    color: $white;
+    display: none;
     font-size: 1rem;
     left: calc(50vw - 100px);
     position: fixed;
@@ -32,7 +33,7 @@
     text-transform: uppercase;
     top: 40px;
     width: fit-content;
-    z-index: 1003;
+    z-index: 1011;
 
     &:hover,
     &:focus {
@@ -42,16 +43,9 @@
     }
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      align-items: flex-start;
-      background-color: $green;
-      display: flex;
-      height: 70px;
-      justify-content: center;
       left: auto;
-      padding-top: $spacing-small;
-      right: 0;
-      top: 0;
-      width: 10%;
+      right: $spacing-small;
+      top: $spacing-small;
     }
   }
 
@@ -61,7 +55,7 @@
     color: $white;
     display: none;
     flex-flow: column;
-    font-size: 2rem;
+    font-size: 1.2rem;
     height: 100vh;
     justify-content: flex-start;
     left: 0;
@@ -82,19 +76,82 @@
       padding: 0 $spacing-small $spacing-large*2 $spacing-small;
     }
 
-    .text {
-      font-size: 1.2rem;
+    &--content {
       margin-top: 20vh;
-      padding: 0 $spacing-large*2 $spacing-large;
+      padding: 0 $spacing-large*1.5 $spacing-large;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         margin-top: $spacing-large*3;
         padding: 0 0 $spacing-large*2;
       }
-    }
 
-    a {
-      color: $white;
+      .text {
+        margin-bottom: $spacing-large*2;
+      }
+
+      .skills {
+        @include reset-list;
+        align-items: flex-start;
+        counter-reset: section;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: $spacing-large*2;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          grid-template-columns: 1fr;
+        }
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        li {
+          border-top: 1px solid $lime;
+          display: flex;
+          flex-flow: row;
+          min-height: 115px;
+          padding-bottom: $spacing-large;
+          padding-right: $spacing-large;
+          padding-top: $spacing-small;
+          position: relative;
+          vertical-align: baseline;
+
+          &::before {
+            color: $lime;
+            content: counter(section);
+            counter-increment: section;
+            font-size: 0.875rem;
+            line-height: 0.875rem;
+            margin-right: 21px;
+            position: relative;
+            vertical-align: baseline;
+          }
+
+          &:nth-last-child(1),
+          &:nth-last-child(2),
+          &:nth-last-child(3) {
+            border-bottom: 1px solid $lime;
+          }
+        }
+      }
+
+      .bios {
+        align-items: flex-start;
+        column-gap: $spacing-large;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: $spacing-large;
+        row-gap: $spacing-large;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-template-columns: 1fr;
+          row-gap: 0;
+        }
+      }
+  
+      a {
+        color: $white;
+      }
     }
   }
 }

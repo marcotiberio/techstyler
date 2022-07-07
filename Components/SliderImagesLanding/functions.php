@@ -190,6 +190,39 @@ function getACFLayout()
                 'media_upload' => 0,
             ],
             [
+                'label' => __('Skills', 'flynt'),
+                'name' => 'skillPanels',
+                'type' => 'repeater',
+                'layout' => 'row',
+                'min' => 1,
+                'button_label' => __('Add Skill', 'flynt'),
+                'sub_fields' => [
+                    [
+                        'label' => __('Skill', 'flynt'),
+                        'name' => 'panelTitle',
+                        'type' => 'text'
+                    ]
+                ],
+            ],
+            [
+                'label' => __('Bios', 'flynt'),
+                'name' => 'bioPanels',
+                'type' => 'repeater',
+                'layout' => 'block',
+                'min' => 1,
+                'button_label' => __('Add Bio', 'flynt'),
+                'sub_fields' => [
+                    [
+                        'label' => __('Bio', 'flynt'),
+                        'name' => 'panelText',
+                        'type' => 'wysiwyg',
+                        'tabs' => 'visual',
+                        'media_upload' => 0,
+                        'delay' => 1
+                    ]
+                ],
+            ],
+            [
                 'label' => __('Options', 'flynt'),
                 'name' => 'optionsTab',
                 'type' => 'tab',
