@@ -87,7 +87,7 @@ h1,
   line-height: 1;
   // margin-bottom: $spacing-small;
   // padding-top: $spacing-small;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
     font-size: 6rem;
@@ -100,7 +100,7 @@ h2,
   line-height: 1;
   margin-bottom: $spacing-small;
   padding-top: $spacing-small;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
     font-size: 3.85rem;
@@ -303,6 +303,14 @@ thead {
 
 tr:nth-child(even) {
   background-color: $color-background-light;
+}
+
+.sans {
+  font-family: 'Rhetorik Sans Regular', sans-serif;
+}
+
+.serif {
+  font-family: 'Rhetorik Serif Regular', serif;
 }
 
 /**

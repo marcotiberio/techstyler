@@ -115,6 +115,32 @@ function getConfig()
                         'classes' => 'h6',
                         'selector' => '*'
                     ],
+                    [
+                        'title' => 'Sans',
+                        'classes' => 'sans',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Serif',
+                        'classes' => 'serif',
+                        'selector' => '*'
+                    ]
+                ]
+            ],
+            [
+                'title' => 'Body',
+                'icon' => '',
+                'items' => [
+                    [
+                        'title' => 'Sans',
+                        'classes' => 'sans',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Serif',
+                        'classes' => 'serif',
+                        'selector' => '*'
+                    ]
                 ]
             ],
             [
@@ -165,6 +191,11 @@ function getConfig()
                     'strikethrough',
                     'blockquote',
                     '|',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright',
+                    'alignjustify',
+                    '|',
                     'bullist',
                     'numlist',
                     '|',
@@ -184,6 +215,11 @@ function getConfig()
                     'bold',
                     'italic',
                     'strikethrough',
+                    '|',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright',
+                    'alignjustify',
                     '|',
                     'link',
                     'unlink',

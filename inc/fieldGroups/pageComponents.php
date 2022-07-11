@@ -17,6 +17,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockSubscriptionConfirmation\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygTwoCol\getACFLayout(),
                     Components\GridPostsArtistSelector\getACFLayout(),
