@@ -557,10 +557,13 @@ select {
 
 [type='checkbox'],
 [type='radio'] {
-  opacity: 0;
+  border: 1px solid $black;
+  border-radius: 0;
+  margin: 0;
+  opacity: 1;
   pointer-events: none;
-  position: absolute;
-  width: 1px;
+  position: relative;
+  width: 20px;
 
   &,
   &:hover,
