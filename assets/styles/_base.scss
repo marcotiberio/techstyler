@@ -24,7 +24,6 @@ html {
   height: 100%;
   line-height: 1.2;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-wrap: break-word;
   scroll-behavior: smooth;
   // transition: all 0.2s linear;
 
@@ -507,7 +506,6 @@ label {
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 #{$input-selectors} {
@@ -559,11 +557,10 @@ select {
 [type='radio'] {
   border: 1px solid $black;
   border-radius: 0;
-  margin: 0;
+  margin: 0 10px 0 0;
   opacity: 1;
   pointer-events: none;
   position: relative;
-  width: 20px;
 
   &,
   &:hover,
