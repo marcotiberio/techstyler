@@ -98,10 +98,6 @@
         margin-bottom: $spacing-large*2;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
-          grid-template-columns: 1fr;
-        }
-
-        @media (max-width: $breakpoint-tablet-horizontal) {
           grid-template-columns: repeat(2, 1fr);
         }
 
@@ -131,6 +127,12 @@
           &:nth-last-child(2),
           &:nth-last-child(3) {
             border-bottom: 1px solid $lime;
+          }
+
+          &:nth-last-child(1) {
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              border-top: 0;
+            }
           }
         }
       }
