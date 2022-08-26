@@ -1,12 +1,6 @@
 [is='flynt-block-wysiwyg-two-col'] {
   .container {
-    column-gap: $spacing-small;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
-    justify-content: space-between;
-
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       display: block;
     }
   }
@@ -23,8 +17,32 @@
       margin: 0;
     }
 
+    &-title {
+      grid-column-end: 2;
+      grid-column-start: 1;
+      text-transform: uppercase;
+    }
+
+    &-left {
+      grid-column-end: 5;
+      grid-column-start: 2;
+
+      @media (max-width: $breakpoint-mobile) {
+        margin-top: 25px;
+
+        p:first-child {
+          &::first-letter {
+            margin-left: $spacing-large;
+          }
+        }
+      }
+    }
+
     &-right {
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-column-end: 9;
+      grid-column-start: 6;
+
+      @media (max-width: $breakpoint-mobile) {
         margin-top: 25px;
 
         p:first-child {

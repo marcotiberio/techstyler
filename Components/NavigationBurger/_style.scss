@@ -17,7 +17,7 @@
   width: 100%;
   z-index: 1010;
 
-  @media (min-width: $breakpoint-tablet-horizontal) {
+  @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 

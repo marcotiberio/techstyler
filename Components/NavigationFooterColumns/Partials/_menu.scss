@@ -1,31 +1,33 @@
 .list {
   @include reset-list;
-  column-gap: $spacing-small;
+  column-gap: $spacing-large;
   display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: space-between;
 
   @media (min-width: $breakpoint-tablet) {
     padding-right: 0;
   }
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile) {
     display: block;
   }
 
   &-item {
     @include reset-content-margins;
+    margin-bottom: $spacing-small;
     width: 100%;
 
-    @media (min-width: $breakpoint-tablet-horizontal) {
-      width: 50%;
+    @media (min-width: $breakpoint-tablet) {
+      flex-grow: 1;
+      width: 40%;
     }
 
     &:last-child {
       grid-column-end: 3;
       grid-column-start: 2;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         grid-column-end: 1;
         grid-column-start: 2;
       }
@@ -33,17 +35,20 @@
   }
 
   &-link {
-    color: $color-text;
+    color: $white;
   }
 
   &-titleLink,
   &-link {
+    color: $white;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: $color-text;
+      color: $white;
       text-decoration: underline;
+      text-underline-offset: 5px;
+      transition: color 0.2s ease-out;
     }
   }
 

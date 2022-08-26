@@ -18,7 +18,7 @@ html {
   box-sizing: border-box;
   color: $color-text;
   font-family: 'Rhetorik Sans Regular', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
@@ -27,8 +27,8 @@ html {
   scroll-behavior: smooth;
   // transition: all 0.2s linear;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
-    font-size: 12px;
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
   }
 
 
@@ -46,7 +46,7 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
-  padding: $spacing-small;
+  padding: $spacing-large 0;
 }
 
 ::placeholder {
@@ -82,62 +82,62 @@ body {
 
 h1,
 .h1 {
-  font-size: 2.35rem;
-  line-height: 1;
-  // margin-bottom: $spacing-small;
-  // padding-top: $spacing-small;
-  // text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  padding-top: 0;
 
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 6rem;
+  @media (min-width: $breakpoint-mobile) {
+    font-size: 2.2rem;
+    margin-bottom: 2.2rem;
   }
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
-  line-height: 1;
-  margin-bottom: $spacing-small;
-  padding-top: $spacing-small;
-  // text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 1.4rem;
+  padding-top: 0;
 
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 3.85rem;
+  @media (min-width: $breakpoint-mobile) {
+    font-size: 1.778rem;
+    margin-bottom: 1.778rem;
   }
 }
 
-h3,
-.h3 {
-  font-size: 1.125rem;
-  padding-top: 1rem;
+// h3,
+// .h3 {
+//   font-size: 1.125rem;
+//   padding-top: 1rem;
 
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.25rem;
-  }
-}
+//   @media (min-width: $breakpoint-mobile) {
+//     font-size: 1.25rem;
+//   }
+// }
 
-h4,
-.h4 {
-  font-size: 1rem;
-  padding-top: 0.5rem;
+// h4,
+// .h4 {
+//   font-size: 1rem;
+//   padding-top: 0.5rem;
 
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.125rem;
-  }
-}
+//   @media (min-width: $breakpoint-mobile) {
+//     font-size: 1.125rem;
+//   }
+// }
 
-h5,
-.h5 {
-  font-size: 1rem;
-  font-weight: 400;
-  padding-top: 0.5rem;
-}
+// h5,
+// .h5 {
+//   font-size: 1rem;
+//   font-weight: 400;
+//   padding-top: 0.5rem;
+// }
 
-h6,
-.h6 {
-  font-size: 1rem;
-  padding-top: 0.5rem;
-}
+// h6,
+// .h6 {
+//   font-size: 1rem;
+//   padding-top: 0.5rem;
+// }
 
 a {
   color: $color-text;
@@ -158,16 +158,21 @@ figure {
   margin: 0 0 2.25rem;
 }
 
+.sectionId {
+  font-size: 0.889rem;
+  text-transform: uppercase;
+}
+
 .small {
   font-size: 1.25rem;
 }
 
 hr {
-  background-color: $color-border;
+  background-color: $black;
   border: 0;
   display: block;
   height: 1px;
-  margin: 2.4rem 0;
+  margin: 0 0 $spacing-small;
 }
 
 img {
@@ -180,7 +185,7 @@ figcaption {
   font-size: 1rem;
   margin-top: $spacing-small;
 
-  // @media (max-width: $breakpoint-tablet-horizontal) {
+  // @media (max-width: $breakpoint-tablet) {
   //   margin-bottom: $spacing-small;
   // }
 }
@@ -619,7 +624,7 @@ select {
 */
 
 .mainHeader {
-  @media (min-width: $breakpoint-tablet-horizontal + 1) {
+  @media (min-width: $breakpoint-tablet + 1) {
     left: 0;
     position: fixed;
     top: 0;
@@ -663,10 +668,13 @@ select {
   }
 }
 
-
-
 .mainContent {
   flex: 1 0 auto;
+}
+
+html:not(.page-coming-soon) .mainContent {
+  flex: 1 0 auto;
+  margin-top: 200px;
 }
 
 .flyntComponent {
@@ -677,9 +685,15 @@ select {
     padding-top: 0;
   }
 
-  &:last-child {
-    margin-bottom: $spacing-small;
-  }
+  // &:last-child {
+  //   margin-bottom: $spacing-small;
+  // }
+}
+
+.gridLayout {
+  column-gap: $spacing-large;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .post-related {
@@ -690,6 +704,20 @@ select {
     &:last-child {
       padding-bottom: 0;
     }
+  }
+}
+
+.boxed {
+  margin: 0 auto;
+  max-width: 1680px;
+  padding: $spacing-large*2 $spacing-large;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-large $spacing-small;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-small*2 $spacing-small;
   }
 }
 
@@ -788,7 +816,7 @@ select {
   @include reset-content-margins;
   padding: 20px;
 
-  @media (min-width: $breakpoint-tablet-horizontal) {
+  @media (min-width: $breakpoint-tablet) {
     padding: 30px;
   }
 }

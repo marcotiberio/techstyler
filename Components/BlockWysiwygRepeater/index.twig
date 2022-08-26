@@ -1,0 +1,16 @@
+<div class="flyntComponent boxed {{ options.theme }}" id="{{ options.sectionId|lower|replace({' ': '-'})}}" is="flynt-block-wysiwyg-repeater">
+  <div class="container gridLayout">
+    <div class="content content-title sectionId">{{ options.sectionId }}</div>
+    <div class="content content-repeater">
+      <div class="content-repeater--title h1">{{ repeaterTitle }}</div>
+      <ul class="list">
+        {% for panel in contentPanels %}
+          <div class="panel">
+            <hr>
+            {{ panel.panelTexteditor|e('wp_kses_custom') }}
+          </div>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

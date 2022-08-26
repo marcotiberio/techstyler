@@ -13,7 +13,7 @@
       transform: translateX(55%);
       z-index: 1;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         display: none;
       }
 
@@ -29,7 +29,7 @@
       transform: translateX(-55%);
       z-index: 1;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         display: none;
       }
 

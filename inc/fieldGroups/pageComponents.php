@@ -17,8 +17,10 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockRepeaterColumns\getACFLayout(),
                     Components\BlockSubscriptionConfirmation\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
+                    Components\BlockWysiwygRepeater\getACFLayout(),
                     Components\BlockWysiwygTwoCol\getACFLayout(),
                     Components\GridPostsArtistSelector\getACFLayout(),
                     Components\ListLogos\getACFLayout(),

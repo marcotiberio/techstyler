@@ -35,3 +35,17 @@ function getIcon()
         'required' => 1
     ];
 }
+
+function getSectionId()
+{
+    return [
+        [
+            'label' => __('Section ID', 'flynt'),
+            'name' => 'sectionId',
+            'type' => 'text',
+            'wrapper' => [
+                'width' => '100',
+            ],
+        ],
+    ];
+}

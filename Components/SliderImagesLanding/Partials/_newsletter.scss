@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile) {
     column-gap: $spacing-small;
   }
 }
@@ -65,7 +65,7 @@
 .form--newsletter {
   margin-top: $spacing-large*2;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile) {
     margin-top: $spacing-large;
   }
 

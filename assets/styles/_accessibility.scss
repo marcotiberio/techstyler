@@ -8,12 +8,12 @@
   display: block;
   position: fixed;
   right: 0;
-  top: $spacing-large;
-  transform: translateX(145px);
+  top: $spacing-large*4;
+  transform: translateX(160px);
   transition: transform 0.3s ease-in-out;
   z-index: 1005;
 
-  @media (max-width: $breakpoint-tablet-horizontal) {
+  @media (max-width: $breakpoint-tablet) {
     display: none;
   }
 

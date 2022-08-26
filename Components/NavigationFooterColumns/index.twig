@@ -1,14 +1,9 @@
 <div class="flyntComponent" is="flynt-navigation-footer-columns">
-  <div class="container">
-    <div class="columns">
-      <div class="columns-info">
-        <div class="logo">
-          <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
-        </div>
-      </div>
+  <div class="container boxed">
+    <div class="columns gridLayout">
       <div class="columns-menu">
         {% include "Partials/_menu.twig" with { items: menu.items } %}
-        <div class="social">
+        {# <div class="social">
           {% if social %}
             <ul class="socialList">
               {% for socials in social %}
@@ -20,15 +15,15 @@
               {% endfor %}
             </ul>
           {% endif %}
-        </div>
-        {% if logotype %}
+        </div> #}
+        {# {% if logotype %}
         <div class="logotype">
           <figure class="figure">
             <img class="figure-image lazyload" src="{{ logotype.src|resize(540) }}">
           </figure>
         </div>
-        {% endif %}
-        <div class="credits-supporters">
+        {% endif %} #}
+        {# <div class="credits-supporters">
           <div class="supporters">
             <p>Supported by</p>
             <ul class="supportersList">
@@ -46,9 +41,17 @@
           <div class="credits">
             {{ socialContentHtml|e('wp_kses_post') }}
           </div>
+        </div> #}
+      </div>
+      <div class="columns-info">
+        <div class="logo">
+          <img class="logo-image" src="{{ logoFooter }}" alt="{{ logoFooter.alt }}">
         </div>
       </div>
+      <div class="columns-newsletter">
+        Newsletter
+      </div>
     </div>
-    {% include 'Partials/_backtotop.twig' %}
+    {# {% include 'Partials/_backtotop.twig' %} #}
   </div>
 </div>
