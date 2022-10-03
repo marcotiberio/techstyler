@@ -87,9 +87,15 @@
       min-height: calc(100vh - 450px);
     }
 
-    .flyntComponent--wysiwygPost {
-      @media (max-width: $breakpoint-tablet) {
-        display: block !important;
+    .flyntComponent {
+      &:last-child {
+        padding-bottom: $spacing-large*2;
+      }
+
+      &--wysiwygPost {
+        @media (max-width: $breakpoint-tablet) {
+          display: block !important;
+        }
       }
     }
   }

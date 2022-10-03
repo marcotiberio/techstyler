@@ -56,3 +56,7 @@ $(document).ready(function () {
     $('.player').toggle()
   })
 })
+
+// Text CHange Membership
+$('#pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text($('#pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text().replace('Would you like to set up automatic renewals?', 'My membership will automatically renew at 360 per year.'))
+$('.pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text($('.pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text().replace('Yes, renew at £200.00 every 6 Months.', 'I understand I can cancel at any time from my membership portal.'))

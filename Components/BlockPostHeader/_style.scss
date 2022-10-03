@@ -109,6 +109,16 @@
                   display: none !important;
                 }
               }
+
+              .bookmark {
+                sup {
+                  button {
+                    &:hover {
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
             }
           }
         }
