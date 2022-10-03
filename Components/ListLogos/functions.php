@@ -56,11 +56,11 @@ function getACFLayout()
             ],
             [
                 'label' => '',
-                'name' => 'items',
+                'name' => 'logos',
                 'type' => 'repeater',
                 'collapsed' => '',
                 'min' => 1,
-                'max' => 8,
+                'max' => 30,
                 'layout' => 'block',
                 'button_label' => 'Add',
                 'sub_fields' => [
@@ -75,13 +75,12 @@ function getACFLayout()
                     ],
                     [
                         'label' => __('Source', 'flynt'),
-                        'name' => 'image',
+                        'name' => 'logoImage',
                         'type' => 'image',
                         'return_format' => 'array',
                         'preview_size' => 'small',
                         'library' => 'all',
                         'mime_types' => 'jpg,jpeg,png,svg',
-                        'instructions' => __('Image-Format: JPG, PNG, SVG. Recommended Minimum Width: 384px.', 'flynt'),
                         'required' => 0,
                         'wrapper' =>  [
                             'width' => '40',

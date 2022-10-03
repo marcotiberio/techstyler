@@ -14,12 +14,9 @@
     "build:production": "cross-env NODE_ENV=production webpack --progress --display=minimal",
     "build:rev": "gulp rev",
     "lint": "run-p --silent lint:*",
-    "lint:scripts": "cross-env eslint '**/*.js'",
     "lint:styles": "cross-env stylelint '**/*.scss'",
-    "lint:php": "cross-env ./vendor/bin/phpcs",
     "lint:scripts:fix": "cross-env eslint '**/*.js' --fix",
     "lint:styles:fix": "cross-env stylelint '**/*.scss' --fix",
-    "lint:php:fix": "cross-env ./vendor/bin/phpcbf",
     "release": "standard-version -a"
   },
   "devDependencies": {
@@ -111,7 +108,8 @@
       "selector-class-pattern": null,
       "max-nesting-depth": null,
       "selector-max-id": null,
-      "selector-max-compound-selectors": 5
+      "selector-max-compound-selectors": null,
+      "property-no-unknown": null
     },
     "ignoreFiles": [
       "dist/**",
@@ -166,6 +164,7 @@
     ]
   },
   "dependencies": {
+    "isotope-layout": "^3.0.6",
     "macy": "^2.5.1",
     "masonry-layout": "^4.2.2",
     "smoothscroll-polyfill": "^0.4.4"

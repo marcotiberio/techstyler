@@ -16,7 +16,7 @@ Options::addTranslatable('ListSearchResults', [
         'label' => __('Title', 'flynt'),
         'name' => 'preContentHtml',
         'type' => 'wysiwyg',
-        'required' => 1,
+        'required' => 0,
         'default_value' => 'Search Result ',
         'instructions' => __('Title of the search Page.', 'flynt'),
         'media_upload' => 0,

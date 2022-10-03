@@ -1,29 +1,34 @@
-<div class="flyntComponent" is="flynt-slider-images">
+<div class="flyntComponent" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-slider-images">
   <script type="application/json">{{ jsonData|json_encode }}</script>
   <div class="container">
+    {# {% if preContentHtml %}
+      <div class="preContent">
+        {{ preContentHtml|e('wp_kses_post') }}
+      </div>
+    {% endif %} #}
     <div data-slider class="slider swiper-container">
       <div class="swiper-wrapper">
-        {% for panel in repeaterSlider %}
+        {% for image in images %}
           <div class="slider-item swiper-slide">
             <figure class="figure">
               <img class="figure-image lazyload"
-                src="{{ panel.panelImage.src|resizeDynamic(0, 1200) }}"
-              {% if panelImage.caption %} >
-                <figcaption class="figure-caption">{{ panelImage.caption|e }}</figcaption>
-              {% endif %}
+                src="{{ image.src|resize(32) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
+                data-sizes="auto"
+                alt="{{ image.alt|e }}">
             </figure>
+            {% if image.caption %}
+              <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
-      <div class="slider-button-container">
-        <button type="button" data-slider-button="prev" class="slider-button slider-button--prev">
-          <i data-feather="arrow-left"></i>
-        </button>
-        {# <div data-slider-pagination class="slider-pagination swiper-pagination-fraction"></div> #}
-        <button type="button" data-slider-button="next" class="slider-button slider-button--next">
-          <i data-feather="arrow-right"></i>
-        </button>
-      </div>
+      <button type="button" data-slider-button="prev" class="slider-button slider-button--prev">
+        <i data-feather="arrow-left"></i>
+      </button>
+      <button type="button" data-slider-button="next" class="slider-button slider-button--next">
+        <i data-feather="arrow-right"></i>
+      </button>
     </div>
   </div>
 </div>

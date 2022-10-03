@@ -3,7 +3,6 @@
 namespace Flynt\Components\BlockNewsletter;
 
 use Flynt\FieldVariables;
-use Flynt\Utils\Options;
 
 function getACFLayout()
 {
@@ -12,20 +11,35 @@ function getACFLayout()
         'label' => 'Block: Newsletter',
         'sub_fields' => [
             [
-                'label' => '',
-                'name' => 'message',
-                'type' => 'message',
-                'message' => "Add this component at the end of the page to expand footer.<br>Create columns from <a href=\"/wp/wp-admin/nav-menus.php\" target='_blank'>Menus</a> section and assign menu to \"Navigation Footer Columns\" location. Social settings are found in <a href=\"/wp/wp-admin/admin.php?page=TranslatableOptions-Default\" target='_blank'>Translatable Options</a>.<br> Alternatively, render the component in <b>document.twig</b> to have it always in fixed position throughout the website.",
-                'new_lines' => 'wpautop',
-            ]
+                'label' => __('Content', 'flynt'),
+                'name' => 'contentTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
+                'label' => __('Content', 'flynt'),
+                'name' => 'contentHtml',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'media_upload' => 0,
+                'delay' => 1,
+            ],
+            [
+                'label' => __('Newsletter', 'flynt'),
+                'name' => 'newsletterTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
+                'label' => __('Newsletter', 'flynt'),
+                'name' => 'newsletter',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'media_upload' => 0,
+                'delay' => 1,
+            ],
         ]
     ];
 }
-
-Options::addTranslatable('BlockNewsletter', [
-    [
-        'label' => __('Content', 'flynt'),
-        'name' => 'contentHtml',
-        'type' => 'wysiwyg',
-    ],
-]);

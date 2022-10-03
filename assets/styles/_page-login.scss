@@ -1,0 +1,29 @@
+/**
+* 7.0 Paid Membership Pro
+*
+* 7.1 Page Login
+*/
+
+.pmpro-login {
+  &:not(.logged-in) {
+    .mainHeader,
+    .mainFooter,
+    .accessibility,
+    hr {
+      display: none;
+    }
+
+    .flyntComponent--shortcode {
+      .container {
+        margin: 0 auto;
+        max-width: 375px;
+      }
+    }
+  
+    .pmpro_actions_nav {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,37 +1,37 @@
 import $ from 'jquery'
 
-$(document).ready(function () {
-  var scrollPos = 0
-  var navDesktop = document.querySelector('header')
+// $(document).ready(function () {
+//   var scrollPos = 0
+//   var navDesktop = document.querySelector('header')
 
-  function checkScrollUp () {
-    var windowY = window.scrollY
-    console.log([windowY, scrollPos])
-    var showHeader
+//   function checkScrollUp () {
+//     var windowY = window.scrollY
+//     console.log([windowY, scrollPos])
+//     var showHeader
 
-    if (windowY < scrollPos) {
-      // Scrolling UP - SHOWS THE HEADER
-      showHeader = true
-    } else {
-      // Scrolling DOWN - HIDES THE HEADER
-      showHeader = false
-    }
+//     if (windowY < scrollPos) {
+//       // Scrolling UP - SHOWS THE HEADER
+//       showHeader = true
+//     } else {
+//       // Scrolling DOWN - HIDES THE HEADER
+//       showHeader = false
+//     }
 
-    if (windowY < 40) {
-      showHeader = true
-    }
+//     if (windowY < 40) {
+//       showHeader = true
+//     }
 
-    if (showHeader) {
-      navDesktop.classList.remove('mainHeaderOut')
-    } else {
-      navDesktop.classList.add('mainHeaderOut')
-    }
+//     if (showHeader) {
+//       navDesktop.classList.remove('mainHeaderOut')
+//     } else {
+//       navDesktop.classList.add('mainHeaderOut')
+//     }
 
-    scrollPos = windowY
-  }
+//     scrollPos = windowY
+//   }
 
-  window.addEventListener('scroll', checkScrollUp)
-})
+//   window.addEventListener('scroll', checkScrollUp)
+// })
 
 // $(document).ready(function () {
 //   $('.filter-events').click(function (e) {

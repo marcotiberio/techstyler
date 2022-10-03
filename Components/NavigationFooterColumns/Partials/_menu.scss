@@ -10,17 +10,26 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    display: block;
+    display: flex;
   }
 
   &-item {
     @include reset-content-margins;
+    color: $white;
     margin-bottom: $spacing-small;
-    width: 100%;
+    width: 40%;
+
+    &:nth-child(even) {
+      text-align: right;
+    }
 
     @media (min-width: $breakpoint-tablet) {
       flex-grow: 1;
       width: 40%;
+
+      &:nth-child(even) {
+        text-align: left;
+      }
     }
 
     &:last-child {

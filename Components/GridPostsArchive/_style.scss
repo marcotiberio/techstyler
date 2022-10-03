@@ -1,16 +1,36 @@
 [is='flynt-grid-posts-archive'] {
+  .preContent {
+    grid-column-end: 9;
+    grid-column-start: 1;
+    
+    .sideTitle {
+      grid-column-end: 2;
+      grid-column-start: 1;
+      text-align: left;
+    }
+
+    .title {
+      grid-column-end: 5;
+      grid-column-start: 2;
+      text-align: left;
+    }
+
+    .description {
+      grid-column-end: 9;
+      grid-column-start: 6;
+      text-align: left;
+    }
+  }
+
   ul {
     @include reset-list;
   }
 
   .posts {
-    @media (min-width: $breakpoint-tablet) {
-      @include grid(2);
-    }
-
-    @media (min-width: $breakpoint-tablet) {
-      @include grid(3);
-    }
+    grid-column-end: 8;
+    grid-column-start: 2;
+    padding: $spacing-large*3 $spacing-large/2;
+    row-gap: $spacing-large*2;
   }
 
   .posts-empty {
@@ -22,6 +42,11 @@
 
     @media (min-width: $breakpoint-tablet) {
       margin-bottom: 0;
+    }
+
+    &-category {
+      margin-bottom: $spacing-small;
+      margin-top: $spacing-large;
     }
 
     &-link {
@@ -36,11 +61,10 @@
 
     &-inner {
       @include reset-content-margins;
-      padding: $gap 0;
     }
 
     &-excerpt {
-      margin-bottom: 0.75rem;
+      margin-bottom: $spacing-large;
     }
   }
 

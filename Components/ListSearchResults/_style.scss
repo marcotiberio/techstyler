@@ -2,4 +2,8 @@
   @import 'Partials/header';
   @import 'Partials/pagination';
   @import 'Partials/results';
+
+  .container {
+    padding-top: 0;
+  }
 }

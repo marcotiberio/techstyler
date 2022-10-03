@@ -1,0 +1,11 @@
+<div class="flyntComponent flyntComponent--membership-levels" {% if options.backgroundColor %} style="background-color: {{ options.backgroundColor }}" {% endif %} is="flynt-block-membership-levels">
+  <div class="container grid8 boxed">
+    <div class="preContent">
+      <div class="left">{{ preContentHtml|e('wp_kses_post') }}</div>
+      <div class="right">{{ preContentRightHtml|e('wp_kses_post') }}</div>
+    </div>
+    <div class="content">
+      {{ shortcode }}
+    </div>
+  </div>
+</div>

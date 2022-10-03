@@ -9,42 +9,47 @@
 [is='flynt-navigation-burger'] {
   $navigation-height: 70px;
   background-color: $white;
+  font-family: 'NB International', sans-serif;
+  font-weight: 400;
   left: 0;
-  padding: $spacing-small !important;
+  padding: 0 !important;
   position: fixed;
   right: auto;
   top: 0;
   width: 100%;
   z-index: 1010;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet + 1) {
     display: none;
   }
 
   .container {
     margin: 0;
-    padding: 0 $spacing-small;
+    padding: 0;
     width: 100vw;
     z-index: 99;
 
     &-inner {
       align-items: center;
       background-color: $color-background;
-      border-bottom: 1px solid $black;
       display: flex;
       height: $navigation-height;
       justify-content: space-between;
-      left: 0;
+      // left: 0;
       margin: 0 auto;
-      padding: 0;
-      position: fixed;
-      right: 0;
-      top: 0;
-      width: calc(100% - 30px);
-      z-index: 100;
+      padding: 0 $spacing-small;
+      // position: fixed;
+      // right: 0;
+      // top: 0;
+      width: 100vw;
+      // z-index: 100;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding: 0 $spacing-large;
+      }
 
       .left {
-        width: 20%;
+        width: 40%;
       }
 
       .right {
@@ -52,7 +57,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
-        width: 80%;
+        width: 60%;
 
         // .searchForm,
         // .hamburger {

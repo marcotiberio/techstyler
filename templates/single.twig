@@ -2,19 +2,20 @@
 
 {% block content %}
   <article class="post">
-    <header class="post-header">
-      {{ renderComponent('BlockPostHeader', { post: post }) }}
-    </header>
-    <section class="post-main">
+    {# {{ renderComponent('BlockPostHeader', { post: post }) }} #}
+    {# <div class="memershipLevel boxed">{{ function('do_shortcode', '[membership level="4" show_noaccess="true"]') }}</div> #}
+    {# <div class="memershipLevel boxed">{{ function('do_shortcode', '[membership_level]') }}</div> #}
+    <div class="post-main">{{ post.content }}</div>
+    {# <section class="post-main">
       {% for component in post.meta('postComponents') %}
         {{ renderComponent(component) }}
       {% endfor %}
-    </section>
+    </section> #}
     <footer class="post-meta">
-      {{ renderComponent('BlockPostFooter', { post: post }) }}
+      {# {{ renderComponent('BlockPostFooter', { post: post }) }} #}
     </footer>
     <section class="post-related">
-      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
+      {{ renderComponent('GridPostsLatest', {'taxonomies': post.categories(), 'options': {'columns': 2}}) }}
     </section>
   </article>
 {% endblock %}

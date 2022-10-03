@@ -6,7 +6,7 @@ use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'podcast';
+const POST_TYPE = 'post';
 
 add_filter('Flynt/addComponentData?name=GridPostsLatest', function ($data) {
     $postType = POST_TYPE;
@@ -78,6 +78,14 @@ Options::addTranslatable('GridPostsLatest', [
         'name' => 'labels',
         'type' => 'group',
         'sub_fields' => [
+            [
+                'label' => __('More on', 'flynt'),
+                'name' => 'moreOn',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
             [
                 'label' => __('Reading Time', 'flynt'),
                 'name' => 'readingTime',

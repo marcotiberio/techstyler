@@ -1,0 +1,19 @@
+<div class="flyntComponent boxed grid8" is="flynt-block-innovator-spotlight">
+  <div class="container">
+    {% if contentHtml %}
+    <div class="preContent">
+      {{ contentHtml|e('wp_kses_post') }}
+    </div>
+    {% endif %}
+    <div class="content">
+      <div class="table">
+        {% for row in rows %}
+          <div class="row" id="row-{{ loop.index }}">
+            <span class="column-left">{{ row.leftColumn }}</span>
+            <span class="column-right">{{ row.rightColumn }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

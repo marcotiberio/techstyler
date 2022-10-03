@@ -1,5 +1,15 @@
+@include font-face('Rhetorik Sans Regular', 'RhetorikSansRegular', '400', 'normal');
+@include font-face('Rhetorik Sans Italic', 'RhetorikSansItalic', '400', 'italic');
+@include font-face('Rhetorik Sans Light', 'RhetorikSansLight', '400', 'normal');
+@include font-face('Rhetorik Sans Light Italic', 'RhetorikSansLightItalic', '300', 'italic');
+@include font-face('Rhetorik Sans Medium', 'RhetorikSansMedium', '400', 'normal');
+@include font-face('Rhetorik Sans Medium Italic', 'RhetorikSansMediumItalic', '500', 'italic');
+@include font-face('Rhetorik Serif Regular', 'RhetorikSerifRegular', '400', 'normal');
+@include font-face('Rhetorik Serif Italic', 'RhetorikSerifItalic', '400', 'italic');
+@include font-face('NB International', 'NBInternationalProRegular', '400', 'normal');
+
 .mce-content-body {
-  background-color: #fff;
+  background-color: #dedede;
 }
 
 #tinymce {
@@ -7,6 +17,7 @@
   .h1 {
     font-family: 'Rhetorik Sans Regular', sans-serif;
     font-size: 40px;
+    font-weight: 400;
     line-height: 42px;
   }
 
@@ -14,17 +25,40 @@
   .h2 {
     font-family: 'Rhetorik Sans Regular', sans-serif;
     font-size: 32px;
+    font-weight: 400;
     line-height: 34px;
   }
 
   p,
   .p
-  .paragraph,
-  table,
-  span {
-    font-family: 'Rhetorik Sans Regular', sans-serif;
+  .paragraph {
+    font-family: 'Rhetorik Serif Regular', serif;
+    font-size: 18px;
     margin: 0;
     margin-block-end: 1.2rem;
     margin-block-start: 0;
+  }
+
+  li {
+    font-family: 'Rhetorik Serif Regular', serif;
+    font-size: 18px;
+    margin: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+
+  .sans {
+    font-family: 'Rhetorik Sans Regular', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    margin-block-end: 1.2rem;
+    margin-block-start: 0;
+  }
+
+  .small {
+    font-family: 'NB International', sans-serif;
+    font-size: 16px;
+    margin: 0 0 $spacing-small;
+    text-transform: uppercase;
   }
 }

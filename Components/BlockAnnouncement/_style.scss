@@ -1,0 +1,76 @@
+[is='flynt-block-announcement'] {
+  $duration: 10000s;
+  background-color: $lime;
+  padding: 0 !important;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  z-index: 1011;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  .ticker-wrap {
+    background-color: $lime;
+    box-sizing: content-box;
+    cursor: default;
+    overflow: hidden;
+    padding-bottom: 7.5px;
+    padding-left: 0;
+    padding-top: 5px;
+    position: relative;
+    width: auto;
+
+    &--1 {
+      cursor: pointer;
+    }
+
+    .ticker {
+      animation-duration: $duration;
+      animation-iteration-count: infinite;
+      animation-name: ticker;
+      animation-timing-function: linear;
+      box-sizing: content-box;
+      display: inline-block;
+      padding-right: 100%;
+      white-space: nowrap;
+
+      &-item {
+        color: $black;
+        display: inline-block;
+        font-family: 'PPRight Grotesk Bold', sans-serif;
+        font-size: 0.778rem;
+        // margin-right: $spacing-large;
+        padding: 0;
+        text-transform: uppercase;
+        transform: translateX(-100vw);
+      }
+    }
+  }
+
+  // .close {
+  //   align-items: center;
+  //   background-color: $lime;
+  //   cursor: pointer;
+  //   display: flex;
+  //   justify-content: center;
+  //   height: 36px;
+  //   position: fixed;
+  //   right: 0;
+  //   top: 0;
+  //   width: 36px;
+  //   z-index: 1012;
+  // }
+}

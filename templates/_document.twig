@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
     {{ function('wp_head') }}
+    <!-- Pixel Code for https://www.fairanalytics.de/ -->
+    <script defer src="https://www.fairanalytics.de/pixel/NhwiDtn7WiKpXo9E"></script>
+    <!-- END Pixel Code -->
   </head>
   <body>
     <a href="#mainContent" class="skipLink">
@@ -15,6 +18,7 @@
       <div class="pageWrapper">
         <header class="mainHeader" id="mainHeader">
           {% block header %}
+            {{ renderComponent('BlockAnnouncement') }}
             {{ renderComponent('NavigationMain') }}
             {{ renderComponent('NavigationBurger') }}
           {% endblock %}
@@ -69,7 +73,7 @@
         </section>
         <footer class="mainFooter">
           {% block footer %}
-            {{ renderComponent('BlockNewsletter') }}
+            {# {{ renderComponent('BlockNewsletter') }} #}
             {{ renderComponent('NavigationFooterColumns') }}
             {{ renderComponent('ListSocial') }}
           {% endblock %}

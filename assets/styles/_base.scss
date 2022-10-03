@@ -12,6 +12,7 @@
 @include font-face('Rhetorik Sans Medium Italic', 'RhetorikSansMediumItalic', '500', 'italic');
 @include font-face('Rhetorik Serif Regular', 'RhetorikSerifRegular', '400', 'normal');
 @include font-face('Rhetorik Serif Italic', 'RhetorikSerifItalic', '400', 'italic');
+@include font-face('NB International', 'NBInternationalProRegular', '400', 'normal');
 
 html {
   background-color: $color-background;
@@ -46,7 +47,6 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
-  padding: $spacing-large 0;
 }
 
 ::placeholder {
@@ -82,14 +82,14 @@ body {
 
 h1,
 .h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   padding-top: 0;
 
   @media (min-width: $breakpoint-mobile) {
-    font-size: 2.2rem;
-    margin-bottom: 2.2rem;
+    font-size: 2.3rem;
+    margin-bottom: 2.3rem;
   }
 }
 
@@ -152,19 +152,110 @@ a {
 }
 
 p,
-.paragraph,
+.paragraph {
+  font-family: 'Rhetorik Serif Regular', serif;
+  margin: 0 0 2.25rem;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    color: $black;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease-out;
+  
+    &:hover,
+    &:focus {
+      color: $color-text;
+      text-decoration: none;
+      transition: color 0.2s ease-out;
+    }
+  
+    &::before {
+      content: '→ ';
+      position: relative;
+    }
+  }
+
+  .button {
+    &::before {
+      content: none;
+      position: relative;
+    }
+  }
+}
+
+.sans {
+  font-family: 'Rhetorik Sans Regular', sans-serif;
+  margin: 0 0 2.25rem;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    color: $black;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease-out;
+  
+    &:hover,
+    &:focus {
+      color: $color-text;
+      text-decoration: none;
+      transition: color 0.2s ease-out;
+    }
+  
+    &::before {
+      content: '→ ';
+      position: relative;
+    }
+  }
+}
+
 table,
 figure {
   margin: 0 0 2.25rem;
+
+  a {
+    color: $black;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease-out;
+  
+    &:hover,
+    &:focus {
+      color: $color-text;
+      text-decoration: none;
+      transition: color 0.2s ease-out;
+    }
+  
+    &::before {
+      content: '→ ';
+      position: relative;
+    }
+  }
+}
+
+figure {
+  margin: 0 0 $spacing-large;
 }
 
 .sectionId {
+  font-family: 'NB International', sans-serif;
   font-size: 0.889rem;
   text-transform: uppercase;
 }
 
 .small {
-  font-size: 1.25rem;
+  font-family: 'NB International', sans-serif;
+  font-size: 0.889rem;
+  margin: 0 0 $spacing-small;
+  text-transform: uppercase;
 }
 
 hr {
@@ -239,14 +330,39 @@ blockquote,
 * Default and custom styled list and table elements.
 */
 
-ul,
-ol {
-  margin: 0 0 1.2rem;
-  padding-left: 1.5rem;
+ul {
+  list-style-image: url('images/arrow.svg');
+  margin: -1.85rem 0 1.2rem;
+  padding-left: 2rem;
 
-  ul,
-  ol {
+  ul {
     margin-bottom: 0;
+  }
+}
+
+ol {
+  list-style-type: none;
+  margin: 0 0 1.2rem;
+  padding-left: 0;
+
+  ol {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+
+  li {
+    counter-increment: customlistcounter;
+
+    &::before {
+      content: counter(customlistcounter) ' ';
+      float: left;
+      font-size: 12px;
+      margin-right: $spacing-small;
+    }
+  }
+
+  ::marker {
+    display: none;
   }
 }
 
@@ -331,8 +447,9 @@ button {
   appearance: none;
   background-color: transparent;
   border: 0;
+  border-radius: 0;
   color: inherit;
-  font-family: inherit;
+  font-family: 'NB International', sans-serif !important;
   font-size: inherit;
   line-height: inherit;
   padding: 0;
@@ -343,15 +460,15 @@ button {
   appearance: none;
   background-color: $black;
   border: 1px solid $black;
-  border-radius: 1rem;
+  border-radius: 0;
   color: $white;
   cursor: pointer;
   display: inline-block;
-  font-family: inherit;
+  font-family: 'NB International', sans-serif !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: inherit;
-  padding: 5px 10px;
+  padding: $spacing-small $spacing-large;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -367,21 +484,21 @@ button {
 
   &:hover,
   &:focus {
-    background-color: $white;
+    background-color: transparent;
     border-color: $black;
     color: $black;
   }
 
   &--ghost {
     background-color: transparent;
-    border-color: $color-text;
-    color: $color-text;
+    border-color: $black;
+    color: $black;
 
     &:hover,
     &:focus {
-      background-color: transparent;
-      border-color: $color-background-dark;
-      color: $color-background-dark;
+      background-color: $black;
+      border-color: $black;
+      color: $white;
     }
   }
 
@@ -396,7 +513,7 @@ button {
     color: $color-text;
     padding: 0;
     position: relative;
-    text-transform: none;
+    // text-transform: none;
     transition: color 0.2s ease-out;
 
     &:hover,
@@ -550,7 +667,9 @@ select {
   background-position: calc(100% - 18px) center;
   background-repeat: no-repeat;
   background-size: 9px;
+  border: 1px solid $black;
   line-height: 1.75;
+  padding-left: 20px;
   padding-right: 45px;
 
   &::-ms-expand {
@@ -613,8 +732,27 @@ select {
 }
 
 [type='email'] {
+  background-color: transparent;
   border-bottom: 1px solid $black;
+  max-width: 100% !important;
   min-height: 20px;
+  width: 100%;
+}
+
+[type='text'] {
+  background-color: transparent;
+  border-bottom: 1px solid $black;
+  max-width: 100% !important;
+  min-height: 20px;
+  width: 100%;
+}
+
+[type='password'] {
+  background-color: transparent;
+  border-bottom: 1px solid $black;
+  max-width: 100% !important;
+  min-height: 20px;
+  width: 100%;
 }
 
 /**
@@ -675,14 +813,33 @@ select {
 html:not(.page-coming-soon) .mainContent {
   flex: 1 0 auto;
   margin-top: 200px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 100px;
+  }
+}
+
+.page-home .mainContent,
+.home .mainContent {
+  flex: 1 0 auto;
+  margin-top: 85px !important;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 70px !important;
+  }
 }
 
 .flyntComponent {
-  padding: $spacing-small 0;
+  padding: 0;
   position: relative;
 
   &:first-child {
     padding-top: 0;
+  }
+
+  &:last-child {
+    // padding-bottom: $spacing-large*3;
+    padding-bottom: 0;
   }
 
   // &:last-child {
@@ -690,11 +847,14 @@ html:not(.page-coming-soon) .mainContent {
   // }
 }
 
-.gridLayout {
-  column-gap: $spacing-large;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-}
+/* 1 col = 12,5vw */
+// .grid8 {
+//   align-items: flex-start;
+//   display: flex;
+//   flex-flow: row wrap;
+//   gap: $spacing-large;
+//   justify-content: flex-start;
+// }
 
 .post-related {
   .flyntComponent {
@@ -704,20 +864,6 @@ html:not(.page-coming-soon) .mainContent {
     &:last-child {
       padding-bottom: 0;
     }
-  }
-}
-
-.boxed {
-  margin: 0 auto;
-  max-width: 1680px;
-  padding: $spacing-large*2 $spacing-large;
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: $spacing-large $spacing-small;
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    padding: $spacing-small*2 $spacing-small;
   }
 }
 

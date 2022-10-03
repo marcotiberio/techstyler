@@ -49,3 +49,10 @@ $(document).ready(function () {
     $('.overlay-about').toggle()
   })
 })
+
+// Play Button
+$(document).ready(function () {
+  $('.playButton').click(function () {
+    $('.player').toggle()
+  })
+})

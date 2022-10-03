@@ -1,40 +1,35 @@
 [is='flynt-hero-image-text'] {
   position: relative;
 
-  .picture {
-    height: 400px;
-    position: relative;
-    width: 100%;
-  }
+  .figure {
+    margin: 0;
 
-  .image {
-    background: $color-contrast;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+    &-image {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
   }
 
   .content {
     align-items: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    color: $white;
     display: flex;
+    flex-flow: column;
+    font-size: 5.556rem;
     height: 100%;
     justify-content: center;
     left: 0;
-    padding: 0 $spacing-small;
+    padding: $spacing-large*3;
     position: absolute;
+    text-align: center;
     top: 0;
     width: 100%;
+    z-index: 1;
 
-    &-inner {
-      @include reset-content-margins;
-      color: $color-background;
-      max-width: $content-max-width;
-      text-align: center;
-
-      #{$heading-selectors} {
-        color: inherit;
-      }
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 2.556rem;
+      padding: $spacing-small;
+      width: 100%;
     }
   }
 

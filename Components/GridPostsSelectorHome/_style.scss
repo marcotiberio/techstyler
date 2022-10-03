@@ -1,0 +1,123 @@
+[is='flynt-grid-posts-selector-home'] {
+  padding-bottom: $spacing-large*2 !important;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-bottom: $spacing-large !important;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-bottom: $spacing-small*2 !important;
+  }
+
+  .preContent {
+    grid-column-end: 9;
+    grid-column-start: 1;
+    margin-bottom: $spacing-small*2;
+
+    .sideTitle {
+      grid-column-end: 9;
+      grid-column-start: 1;
+      text-align: left;
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1680px;
+  }
+  
+  .grid {
+    @include reset-list;
+    grid-column-end: 9;
+    grid-column-start: 1;
+    padding: $spacing-large*3 $spacing-large;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-bottom: $spacing-large;
+      padding-top: $spacing-large;
+    }
+
+    &-item {
+      margin-bottom: $spacing-large*3;
+
+      @media (max-width: $breakpoint-mobile) {
+        margin-bottom: $spacing-large*3;
+      }
+
+      &:nth-child(odd) {
+        grid-column-end: 5;
+        grid-column-start: 2;
+
+        @media (max-width: $breakpoint-tablet) {
+          grid-column-end: 5;
+          grid-column-start: 1;
+        }
+      }
+
+      &:nth-child(even) {
+        grid-column-end: 8;
+        grid-column-start: 5;
+
+        @media (max-width: $breakpoint-tablet) {
+          grid-column-end: 9;
+          grid-column-start: 5;
+        }
+      }
+
+      &:hover {
+        .figure-image {
+          overflow: hidden;
+          transform: scale(1.1);
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+    .figure {
+      flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      margin: 0;
+      overflow: hidden;
+      transition: all 0.2s linear;
+
+      &-image {
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        transition: all 0.2s linear;
+      }
+    }
+
+    .post-category {
+      margin-bottom: $spacing-small;
+      margin-top: $spacing-large;
+    }
+
+    &-inner {
+      @include reset-content-margins;
+
+      .button--link {
+        font-family: 'NB Internaional', sans-serif;
+      }
+    }
+
+    &-link {
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  .allPostsLink {
+    padding-top: 1.5rem;
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: 3rem;
+    }
+  }
+}

@@ -6,49 +6,6 @@ use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-// add_filter('Flynt/addComponentData?name=GridAllPosts', function ($data) {
-
-//     $data['items'] = Timber::get_posts([
-//         'post_status' => 'publish',
-//         'post_type' => array(
-//             'event',
-//             'podcast',
-//             'article',
-//         ),
-//         'posts_per_page' => 20,
-//         'paged' => 1,
-//         'meta_query' => array(
-//             array(
-//                 'key' => 'datePost'
-//             ),
-//         ),
-//         'order' => 'DESC',
-//     ]);
-
-//     return $data;
-// });
-
-// add_filter('Flynt/addComponentData?name=GridAllPosts', function ($data) {
-
-//     $data['items'] = Timber::get_posts([
-//         'post_status' => 'publish',
-//         'post_type' => array(
-//             'event',
-//             'podcast',
-//             'article',
-//         ),
-//         'posts_per_page' => 20,
-//         'meta_query' => array(
-//             array(
-//                 'key' => 'datePost'
-//             ),
-//         ),
-//         'order' => 'DESC',
-//     ]);
-
-//     return $data;
-// });
-
 function getACFLayout()
 {
     return [
@@ -59,7 +16,16 @@ function getACFLayout()
                 'label' => '',
                 'name' => 'message',
                 'type' => 'message',
-                'message' => "This is a default component to show all posts.",
+                'message' => __('This is a default component to show all the posts in your intel archive', 'flynt'),
+            ],
+            [
+                'label' => '',
+                'name' => 'options',
+                'type' => 'group',
+                'layout' => 'block',
+                'sub_fields' => [
+                    FieldVariables\getSectionId()
+                ]
             ],
         ]
     ];

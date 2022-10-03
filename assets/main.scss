@@ -5,11 +5,16 @@
   'styles/mixins',
   'styles/base',
   'styles/basespecific',
+  'styles/membership',
+  'styles/layouts',
   'styles/accessibility',
+  'styles/page-archive',
+  'styles/single',
   'styles/single-article',
   'styles/page-articles',
   'styles/page-comingsoon',
-  'styles/page-subscription_confirmation';
+  'styles/page-subscription_confirmation',
+  'styles/page-login';
 
 // stylelint-disable-next-line scss/at-import-no-partial-leading-underscore, scss/at-import-partial-extension-blacklist
 @import '../Components/**/_style.scss';

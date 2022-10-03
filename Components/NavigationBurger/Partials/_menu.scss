@@ -2,16 +2,17 @@
   @include reset-list;
   backface-visibility: hidden;
   background-color: $color-background;
-  height: calc(100% - #{$navigation-height});
+  height: 0;
   left: 0;
   margin: 0;
+  opacity: 0;
   overflow-y: auto;
   padding-bottom: 30px;
   padding-top: 30px;
   position: fixed;
   top: $navigation-height;
-  transform: translateY(-100%);
-  transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.45s;
+  // transform: translateY(-100%);
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.45s;
   visibility: hidden;
   width: 100%;
   z-index: 98;
@@ -60,6 +61,8 @@
 }
 
 &.flyntComponent-menuIsOpen .menu {
+  height: calc(100% - #{$navigation-height});
+  opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }

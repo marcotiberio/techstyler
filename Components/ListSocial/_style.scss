@@ -1,10 +1,10 @@
 [is='flynt-list-social'] {
   background-color: $lime;
-  padding: $spacing-small $spacing-large;
+  padding: $spacing-small $spacing-large !important;
   text-align: center;
 
   @media (max-width: $breakpoint-tablet) {
-    padding: 0 $spacing-small;
+    padding: $spacing-small;
   }
 
   .contact {
@@ -31,7 +31,7 @@
     .list {
       display: flex;
       flex-flow: row wrap;
-      grid-column-end: 3;
+      grid-column-end: 9;
       grid-column-start: 1;
       list-style: none;
       margin: 0;

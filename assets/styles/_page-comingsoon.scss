@@ -11,6 +11,15 @@
     padding: 0;
   }
 
+  .pageWrapper.about-open .navMain,
+  .navMain {
+    background-color: transparent;
+  }
+
+  .mainContent {
+    margin-top: 0 !important;
+  }
+
   .flyntComponent {
     margin-bottom: 0;
     padding: 0;

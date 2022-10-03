@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'BlockWysiwygRepeater',
-        'label' => 'Block: Rich Text Column',
+        'label' => 'Block: Text Editor Column (x2)',
         'sub_fields' => [
             [
                 'label' => __('Content', 'flynt'),
@@ -30,6 +30,15 @@ function getACFLayout()
                 'min' => 1,
                 'button_label' => __('Add Text Editor', 'flynt'),
                 'sub_fields' => [
+                    [
+                        'label' => __('Image', 'flynt'),
+                        'name' => 'panelImage',
+                        'type' => 'image',
+                        'preview_size' => 'medium',
+                        'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
+                        'required' => 0,
+                        'mime_types' => 'jpg,jpeg,png,svg',
+                    ],
                     [
                         'label' => __('Text Editor', 'flynt'),
                         'name' => 'panelTexteditor',
@@ -54,6 +63,25 @@ function getACFLayout()
                 'layout' => 'block',
                 'sub_fields' => [
                     FieldVariables\getSectionId(),
+                    [
+                        'label' => __('Background Color', 'flynt'),
+                        'name' => 'backgroundColor',
+                        'type' => 'color_picker',
+                    ],
+                    [
+                        'label' => __('Hide Title', 'flynt'),
+                        'name' => 'hideTitle',
+                        'type' => 'true_false',
+                        'default_value' => 0,
+                        'ui' => 1
+                    ],
+                    [
+                        'label' => __('Hide Top Border', 'flynt'),
+                        'name' => 'hideTopBorder',
+                        'type' => 'true_false',
+                        'default_value' => 0,
+                        'ui' => 1
+                    ],
                 ]
             ]
         ]

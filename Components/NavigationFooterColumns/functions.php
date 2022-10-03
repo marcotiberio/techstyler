@@ -59,77 +59,107 @@ Options::addTranslatable('NavigationFooterColumns', [
         'return_format' => 'array',
         'preview_size' => 'medium',
         'library' => 'all',
-    ],
-    [
-        'label' => __('Supported by', 'flynt'),
-        'name' => 'repeaterSupporters',
-        'type' => 'repeater',
-        'layout' => 'table',
-        'button_label' => __('Add Support Logo', 'flynt'),
-        'sub_fields' => [
-            [
-                'label' => __('Supporter Logo', 'flynt'),
-                'name' => 'image',
-                'type' => 'image',
-                'return_format' => 'array',
-                'preview_size' => 'small',
-                'library' => 'all',
-                'min' => 1,
-                'wrapper' => [
-                    'width' => '50',
-                ]
-            ],
-            [
-                'label' => __('Supporter Link', 'flynt'),
-                'name' => 'supporterLink',
-                'type' => 'text',
-                'wrapper' => [
-                    'width' => '50',
-                ]
-            ]
+        'wrapper' => [
+            'width' => '50',
         ]
     ],
     [
-        'label' => __('Credits', 'flynt'),
-        'name' => 'socialContentHtml',
+        'label' => __('Claim', 'flynt'),
+        'name' => 'claimFooter',
+        'type' => 'image',
+        'return_format' => 'array',
+        'preview_size' => 'medium',
+        'library' => 'all',
+        'wrapper' => [
+            'width' => '50',
+        ]
+    ],
+    // [
+    //     'label' => __('Supported by', 'flynt'),
+    //     'name' => 'repeaterSupporters',
+    //     'type' => 'repeater',
+    //     'layout' => 'table',
+    //     'button_label' => __('Add Support Logo', 'flynt'),
+    //     'sub_fields' => [
+    //         [
+    //             'label' => __('Supporter Logo', 'flynt'),
+    //             'name' => 'image',
+    //             'type' => 'image',
+    //             'return_format' => 'array',
+    //             'preview_size' => 'small',
+    //             'library' => 'all',
+    //             'min' => 1,
+    //             'wrapper' => [
+    //                 'width' => '50',
+    //             ]
+    //         ],
+    //         [
+    //             'label' => __('Supporter Link', 'flynt'),
+    //             'name' => 'supporterLink',
+    //             'type' => 'text',
+    //             'wrapper' => [
+    //                 'width' => '50',
+    //             ]
+    //         ]
+    //     ]
+    // ],
+    // [
+    //     'label' => __('Credits', 'flynt'),
+    //     'name' => 'socialContentHtml',
+    //     'type' => 'wysiwyg',
+    //     'toolbar' => 'basic',
+    //     'tabs' => 'visual',
+    //     'media_upload' => 0,
+    // ],
+    // [
+    //     'label' => __('Social Platform', 'flynt'),
+    //     'name' => 'social',
+    //     'type' => 'repeater',
+    //     'layout' => 'table',
+    //     'button_label' => __('Add Social Link', 'flynt'),
+    //     'sub_fields' => [
+    //         [
+    //             'label' => __('Platform', 'flynt'),
+    //             'name' => 'platform',
+    //             'type' => 'select',
+    //             'allow_null' => 0,
+    //             'multiple' => 0,
+    //             'ui' => 1,
+    //             'ajax' => 0,
+    //             'return_format' => 'array',
+    //             'choices' => [
+    //                 'soundcloud' => 'Soundcloud',
+    //                 'facebook' => 'Facebook',
+    //                 'instagram' => 'Instagram',
+    //                 'twitter' => 'Twitter',
+    //                 'youtube' => 'Youtube',
+    //                 'linkedin' => 'LinkedIn',
+    //                 'bandcamp' => 'Bandcamp',
+    //                 'spotify' => 'Spotify',
+    //             ]
+    //         ],
+    //         [
+    //             'label' => __('Link', 'flynt'),
+    //             'name' => 'url',
+    //             'type' => 'url',
+    //             'required' => 1
+    //         ],
+    //     ]
+    // ],
+    [
+        'label' => __('Newsletter', 'flynt'),
+        'name' => 'newsletterTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0,
+    ],
+    [
+        'label' => __('Form', 'flynt'),
+        'name' => 'formForm',
         'type' => 'wysiwyg',
-        'toolbar' => 'basic',
         'tabs' => 'visual',
+        'delay' => 1,
         'media_upload' => 0,
-    ],
-    [
-        'label' => __('Social Platform', 'flynt'),
-        'name' => 'social',
-        'type' => 'repeater',
-        'layout' => 'table',
-        'button_label' => __('Add Social Link', 'flynt'),
-        'sub_fields' => [
-            [
-                'label' => __('Platform', 'flynt'),
-                'name' => 'platform',
-                'type' => 'select',
-                'allow_null' => 0,
-                'multiple' => 0,
-                'ui' => 1,
-                'ajax' => 0,
-                'return_format' => 'array',
-                'choices' => [
-                    'soundcloud' => 'Soundcloud',
-                    'facebook' => 'Facebook',
-                    'instagram' => 'Instagram',
-                    'twitter' => 'Twitter',
-                    'youtube' => 'Youtube',
-                    'linkedin' => 'LinkedIn',
-                    'bandcamp' => 'Bandcamp',
-                    'spotify' => 'Spotify',
-                ]
-            ],
-            [
-                'label' => __('Link', 'flynt'),
-                'name' => 'url',
-                'type' => 'url',
-                'required' => 1
-            ],
-        ]
+        'required' => 0,
     ],
 ]);

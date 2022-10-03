@@ -4,10 +4,30 @@ namespace Flynt\Components\BlockPostHeader;
 
 use Flynt\Utils\Options;
 
-add_filter('Flynt/addComponentData?name=BlockPostHeader', function ($data) {
+// add_filter('Flynt/addComponentData?name=BlockPostHeader', function ($data) {
 
-    return $data;
-});
+//     return $data;
+// });
+
+function getACFLayout()
+{
+    return [
+        'name' => 'blockPostHeader',
+        'label' => 'Block: Post Header',
+        'sub_fields' => [
+            [    
+                'label' => __('Listen', 'flynt'),
+                'name' => 'audioEmbed',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'delay' => 1,
+                'media_upload' => 0,
+                'required' => 0,
+                'instructions' => __('Copy here the embed code from the audio player.', 'flynt')
+            ],
+        ]
+    ];
+}
 
 Options::addTranslatable('BlockPostHeader', [
     [

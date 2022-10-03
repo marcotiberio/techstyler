@@ -1,23 +1,68 @@
 <div class="flyntComponent" is="flynt-block-post-header">
-  <div class="container centerMaxWidthContainer">
-    <div class="content centerContentMaxWidth">
-      <h1>{{ post.title }}</h1>
-      <div class="meta">
-        {% if post.date %}
-          <time class="meta-date" datetime="{{ post.post_date }}">{{ post.date|date }}</time> {{ dividers.authorDivider|e }}
+<header class="post-header grid2">
+  <div class="post-header--left">
+    <div class="top">
+      <div class="metaInfo small">
+        <div class="row grid4">
+          <sup class="left">Category</sup>
+          <div class="right">
+            <span>{{ post.get_terms('category')|first }}</span>
+            {# <sup>( {{ post.terms('category')|length }} )</sup> #}
+          </div>
+        </div>
+        <div class="row grid4">
+          <sup class="left">Author</sup>
+          <div class="right">
+            <span>{{post.author.name}}</span>
+            {# <sup>( {{ post.author.name|length }} )</sup> #}
+            {# <sup>( {{ function('getPostCount') }} )</sup> #}
+          </div>
+        </div>
+        {# <div class="row grid4">
+          <sup class="left">Reading Time</sup>
+          <div class="right">
+            <span>{{ item.content | readingtime }} MIN</span>
+          </div>
+        </div> #}
+        {% if audioEmbed or function('do_shortcode', '[favorite_button]') %}
+        <div class="row grid4">
+          <sup class="left">Options</sup>
+          <div class="right">
+            {% if audioEmbed %}
+            <div class="listen outer">
+              <span>Listen</span>
+              <sup class="playButton">( {{ audioEmbed }} )</sup>
+            </div>
+            {% endif %}
+            {% if function( 'is_user_logged_in') %}
+            <div class="outer">
+              <span>Save for later</span>
+              <sup>({{ function('do_shortcode', '[favorite_button]') }})</sup>
+            </div>
+            {% endif %}
+            {# <div class="outer">
+              <span>Share</span>
+              <sup>(Socials)</sup>
+            </div> #}
+          </div>
+        </div>
         {% endif %}
-        {{ labels.postedByLabel|e }} <a class="meta-author" href="{{ post.author.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Author:", "flynt") }}</span> {{ post.author.name }}</a>
-        {{ labels.postedInLabel|e }} <a class="meta-category" href="{{ post.category.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Category:", "flynt") }}</span> {{ post.category }}</a>
-        {{ dividers.readingtimeDivider|e }} <span class="meta-readingtime">{{ post.content|readingtime }} {{ labels.readingtimeLabel|e }}</span>
       </div>
-      {% if post.post_excerpt %}
-        <p class="excerpt h3">{{ post.post_excerpt }}</p>
-      {% endif %}
+    </div>
+    <div class="bottom grid4">
+      <div class="format small">{{ post.terms('format') | join(', ')  }}</div>
+      <div class="title h1">{{ post.title }}</div>
     </div>
   </div>
-  {% if post.thumbnail %}
+  <div class="post-header--right">
+    {% if post.thumbnail %}
     <div class="featuredImage">
-      {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeLarge' }, noComponentSpacing: true }) }}
+      <img class="figure-image lazyload"
+        src="{{ post.thumbnail.src }}"
+        data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
+        data-sizes="auto">
     </div>
-  {% endif %}
+    {% endif %}
+  </div>
+  </header>
 </div>

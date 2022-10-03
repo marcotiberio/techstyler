@@ -1,0 +1,58 @@
+[is='flynt-block-innovator-spotlight'] {
+  .container {
+    grid-column-end: 7;
+    grid-column-start: 3;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-column-end: 9;
+      grid-column-start: 1;
+    }
+
+    .preContent {
+      margin-bottom: $spacing-large*2;
+      text-align: left;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: $spacing-large;
+      }
+    }
+    
+    .table {
+      border: 1px solid $black;
+      display: grid;
+      grid-template-columns: 1fr;
+      // row-gap: $spacing-large;
+
+      .row {
+        border-bottom: 1px solid $black;
+        column-gap: $spacing-large;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        line-height: 2rem;
+        // padding-bottom: $spacing-small/2;
+        // row-gap: $spacing-large;
+
+        &:first-child {
+          .column-right {
+            font-weight: bold;
+          }
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        .column {
+          &-left {
+            padding-left: $spacing-small;
+          }
+
+          &-right {
+            border-left: 1px solid $black;
+            padding-left: $spacing-small;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 [is='flynt-navigation-footer-columns'] {
   @import 'Partials/menu';
   @import 'Partials/backtotop';
+  @import 'Partials/newsletter';
 
   background-color: $green;
+  font-family: 'NB International', sans-serif;
+  font-size: 0.8rem;
   margin-bottom: 0;
 
   + [is='flynt-navigation-footer'] .container {
@@ -10,12 +13,15 @@
   }
 
   .container {
-    padding-bottom: $spacing-large;
-    padding-top: $spacing-large;
+    padding: $spacing-large;
   }
 
   .columns {
     align-items: flex-start;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: block !important;
+    }
 
     &-menu {
       align-items: stretch;
@@ -51,6 +57,10 @@
       justify-content: center;
       text-align: center;
       width: 100%;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding: $spacing-large*2 0;
+      }
     }
 
     &-newsletter {
@@ -63,17 +73,16 @@
   .logo {    
     &-image {
       display: block;
-      filter: invert(1);
-      margin: 0 auto;
-      max-height: 400px;
+      margin: 0 auto $spacing-small auto;
+      max-height: 80px;
       width: auto;
 
       @media (min-width: $breakpoint-tablet) {
-        margin: 0 auto 0 0;
+        margin: 0 auto $spacing-large auto;
       }
 
       @media (max-width: $breakpoint-mobile) {
-        margin: 0;
+        margin: 0 auto $spacing-small auto;
         max-height: 100px;
       }
     }

@@ -8,19 +8,19 @@ function getACFLayout()
 {
     return [
         'name' => 'BlockRepeaterColumns',
-        'label' => 'Block: Repeater Columns',
+        'label' => 'Block: Text Editor Column (x3)',
         'sub_fields' => [
+            [
+                'label' => __('List', 'flynt'),
+                'name' => 'listTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
             [
                 'label' => __('List Title', 'flynt'),
                 'name' => 'repeaterTitle',
                 'type' => 'text'
-            ],
-            [
-                'label' => __('List', 'flynt'),
-                'name' => 'list',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0,
             ],
             [
                 'label' => __('Panel', 'flynt'),
@@ -60,6 +60,18 @@ function getACFLayout()
                 'layout' => 'block',
                 'sub_fields' => [
                     FieldVariables\getSectionId(),
+                    [
+                        'label' => __('Background Color', 'flynt'),
+                        'name' => 'backgroundColor',
+                        'type' => 'color_picker',
+                    ],
+                    [
+                        'label' => __('Hide Title', 'flynt'),
+                        'name' => 'hideTitle',
+                        'type' => 'true_false',
+                        'default_value' => 0,
+                        'ui' => 1
+                    ]
                 ]
             ]
         ]

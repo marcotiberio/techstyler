@@ -1,6 +1,6 @@
 <div class="flyntComponent" is="flynt-navigation-footer-columns">
-  <div class="container boxed">
-    <div class="columns gridLayout">
+  <div class="container">
+    <div class="columns grid8">
       <div class="columns-menu">
         {% include "Partials/_menu.twig" with { items: menu.items } %}
         {# <div class="social">
@@ -46,10 +46,11 @@
       <div class="columns-info">
         <div class="logo">
           <img class="logo-image" src="{{ logoFooter }}" alt="{{ logoFooter.alt }}">
+          <img class="claim-image" src="{{ claimFooter }}" alt="{{ claimFooter.alt }}">
         </div>
       </div>
       <div class="columns-newsletter">
-        Newsletter
+        {{ formForm }}
       </div>
     </div>
     {# {% include 'Partials/_backtotop.twig' %} #}

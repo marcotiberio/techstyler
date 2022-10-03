@@ -17,15 +17,29 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockLegalPage\getACFLayout(),
+                    Components\BlockMembershipLevels\getACFLayout(),
+                    Components\BlockNewsletter\getACFLayout(),
                     Components\BlockRepeaterColumns\getACFLayout(),
+                    Components\BlockShortcode\getACFLayout(),
                     Components\BlockSubscriptionConfirmation\getACFLayout(),
-                    Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygRepeater\getACFLayout(),
-                    Components\BlockWysiwygTwoCol\getACFLayout(),
-                    Components\GridPostsArtistSelector\getACFLayout(),
+                    Components\BlockTextFormTwoCol\getACFLayout(),
+                    Components\BlockTextImageRepeater\getACFLayout(),
+                    Components\BlockTextImageTwoCol\getACFLayout(),
+                    Components\GridAllPosts\getACFLayout(),
+                    Components\GridPostsLatest\getACFLayout(),
+                    Components\GridPostsPremium\getACFLayout(),
+                    Components\GridPostsSelectorHome\getACFLayout(),
+                    Components\HeroImageText\getACFLayout(),
+                    Components\HeroImageTextHalf\getACFLayout(),
+                    Components\HeroVideo\getACFLayout(),
                     Components\ListLogos\getACFLayout(),
                     Components\ListSocial\getACFLayout(),
+                    Components\SliderImages\getACFLayout(),
                     Components\SliderImagesLanding\getACFLayout(),
+                    Components\SliderText\getACFLayout(),
+                    Components\SliderTextDropdown\getACFLayout(),
                 ]
             ]
         ],
@@ -35,11 +49,6 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'page'
-                ],
-                [
-                    'param' => 'page',
-                    'operator' => '!=',
-                    'value' => '16'
                 ]
             ]
         ]

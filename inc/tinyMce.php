@@ -37,6 +37,11 @@ add_filter('tiny_mce_before_init', function ($init) {
             // Send it to style_formats as true js array
             $init['style_formats'] = json_encode($config['styleformats']);
         }
+
+        if (isset($config['textcolor_map'])) {
+            // Send it to textcolor_map as true js array
+            $init['textcolor_map'] = json_encode($config['textcolor_map']);
+        }
     }
     return $init;
 });
@@ -132,13 +137,18 @@ function getConfig()
                 'icon' => '',
                 'items' => [
                     [
+                        'title' => 'Small',
+                        'classes' => 'small',
+                        'selector' => 'p'
+                    ],
+                    // [
+                    //     'title' => 'Sans',
+                    //     'classes' => 'sans',
+                    //     'selector' => '*'
+                    // ],
+                    [
                         'title' => 'Sans',
                         'classes' => 'sans',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Serif',
-                        'classes' => 'serif',
                         'selector' => '*'
                     ]
                 ]
@@ -188,8 +198,11 @@ function getConfig()
                     'styleselect',
                     'bold',
                     'italic',
-                    'strikethrough',
-                    'blockquote',
+                    'underline',
+                    'superscript',
+                    '|',
+                    'forecolor',
+                    'backcolor',
                     '|',
                     'alignleft',
                     'aligncenter',
@@ -202,19 +215,18 @@ function getConfig()
                     'link',
                     'unlink',
                     '|',
-                    'pastetext',
-                    'removeformat',
-                    '|',
-                    'undo',
-                    'redo',
-                    'fullscreen'
+                    'removeformat'
                 ]
             ],
             'basic' => [
                 [
                     'bold',
                     'italic',
-                    'strikethrough',
+                    'underline',
+                    'superscript',
+                    '|',
+                    'forecolor',
+                    'backcolor',
                     '|',
                     'alignleft',
                     'aligncenter',
@@ -222,11 +234,7 @@ function getConfig()
                     'alignjustify',
                     '|',
                     'link',
-                    'unlink',
-                    '|',
-                    'undo',
-                    'redo',
-                    'fullscreen'
+                    'unlink'
                 ]
             ]
         ]
