@@ -61,6 +61,16 @@
       }
     }
 
+    &-item {
+      line-height: 0.889rem;
+      
+      &:last-child {
+        img {
+          height: 1rem;
+        }
+      }
+    }
+
     &-link {
       color: $black;
       display: inline-block;
