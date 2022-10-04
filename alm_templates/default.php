@@ -8,7 +8,6 @@
         <span><?php $categories = get_the_category(); if ( ! empty( $categories ) ) { echo esc_html( $categories[0]->name ); }?></span>
         <span> / </span>
         <span><?php the_terms( $post->ID, 'format' ); ?></span>
-        <span class="premiumClass">Premium</span>
     </div>
     <div class="post-inner">
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" aria-hidden="true" tabindex="-1"><h2 class="h2 post-title"><?php the_title(); ?></h2></a>

@@ -1,0 +1,74 @@
+[is='flynt-block-author'] {
+  height: auto;
+  
+  .container {
+    border-bottom: 1px solid $black;
+    border-top: 1px solid $black;
+    grid-column-end: 7;
+    grid-column-start: 3;
+    padding: $spacing-large 0;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-column-end: 9;
+      grid-column-start: 2;
+      padding: $spacing-small 0;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-column-end: 9;
+      grid-column-start: 1;
+      margin-left: auto;
+      margin-right: 0;
+      padding: $spacing-small 0;
+      width: calc(75% - 7.5px);
+    }
+  }
+  
+  .box {
+    column-gap: $spacing-large;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0;
+    row-gap: $spacing-large;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    &-inner {
+      @include reset-content-margins('both');
+
+      &--image {
+        @media (max-width: $breakpoint-mobile) {
+          img {
+            aspect-ratio: 3/2;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &--content {
+        .top {
+          margin-bottom: $spacing-small/2;
+        }
+      }
+    }
+  }
+
+  .figure-caption {
+    display: none;
+  }
+
+  figure {
+    margin: 0;
+
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+  
+      @media (max-width: $breakpoint-tablet) {
+        height: auto;
+      }
+    }
+  }
+}

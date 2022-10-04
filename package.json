@@ -109,7 +109,8 @@
       "max-nesting-depth": null,
       "selector-max-id": null,
       "selector-max-compound-selectors": null,
-      "property-no-unknown": null
+      "property-no-unknown": null,
+      "selector-no-qualifying-type": null
     },
     "ignoreFiles": [
       "dist/**",

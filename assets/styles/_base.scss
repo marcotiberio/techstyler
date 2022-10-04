@@ -29,7 +29,7 @@ html {
   // transition: all 0.2s linear;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 14px;
+    font-size: 16px;
   }
 
 
@@ -331,8 +331,8 @@ blockquote,
 */
 
 ul {
-  list-style-image: url('images/arrow.svg');
-  margin: -1.85rem 0 1.2rem;
+  list-style-image: url('/wp-content/themes/techstyler/dist/assets/icons/arrow.svg');
+  margin: -1.5rem 0 1.2rem;
   padding-left: 2rem;
 
   ul {
@@ -625,9 +625,11 @@ legend {
 
 label {
   display: inline-block;
-  font-weight: 400;
+  font-family: 'NB International', sans-serif;
+  font-weight: 400 !important;
   line-height: 1.5;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 #{$input-selectors} {

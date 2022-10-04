@@ -79,12 +79,12 @@
 
     @media (max-width: $breakpoint-tablet) {
       height: auto;
-      min-height: calc(100vh - 400px);
+      min-height: calc(100vh - 300px);
     }
 
     @media (max-width: $breakpoint-mobile) {
       height: auto;
-      min-height: calc(100vh - 450px);
+      min-height: calc(100vh - 250px);
     }
 
     .flyntComponent {

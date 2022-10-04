@@ -8,27 +8,7 @@
     <div class="filterSection">
       <div class="filterSection--inner grid8">
         <div class="content content-title sectionId small">{{ options.sectionId }}</div>
-        {{ function('do_shortcode', '[ajax_load_more_filters target="Home" filters="true" id="topic"]') }}
-        {# <div class="filterSection--topic">
-          <div class="category-list">
-            
-          </div>
-        </div> #}
-        {# <div class="filterSection--format">
-          <sup class="label">FORMAT</sup>
-          <div class="category-list">
-          <li class="category category-all active" data-term="all">All</li>
-          {% for category in formats %}
-            {% if category.count >= 0 %}
-              <li class="category" data-format="{{ category.title|lower|replace({' ': '-'}) }}">{{ category.title }}</li>
-            {% endif %}
-          {% endfor %}
-          </div>
-        </div> #}
-        {# <div class="filterSection--search">
-          <sup class="label">SEARCH</sup>
-          {% include 'Partials/_search.twig' %}
-        </div> #}
+        {{ function('do_shortcode', '[ajax_load_more_filters target="Home" filters="true" filters_url="true" id="topic"]') }}
         <div class="filterSection--empty"></div>
       </div>
     </div>

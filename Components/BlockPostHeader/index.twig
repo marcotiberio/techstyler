@@ -1,5 +1,5 @@
 <div class="flyntComponent" is="flynt-block-post-header">
-<header class="post-header grid2">
+<header class="post-header post-header--{{ post.terms('format')|join(', ')|lower|replace({' ': '-'}) }} grid2">
   <div class="post-header--left">
     <div class="top">
       <div class="metaInfo small">

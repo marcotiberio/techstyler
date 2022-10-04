@@ -60,6 +60,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\BlockAuthor\getACFLayout(),
                     Components\BlockFootnotes\getACFLayout(),
                     Components\BlockImagePost\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),

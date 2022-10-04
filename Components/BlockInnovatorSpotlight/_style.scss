@@ -18,7 +18,6 @@
     }
     
     .table {
-      border: 1px solid $black;
       display: grid;
       grid-template-columns: 1fr;
       // row-gap: $spacing-large;
@@ -44,11 +43,13 @@
 
         .column {
           &-left {
+            font-family: 'NB International', sans-serif;
+            font-size: 0.889rem;
             padding-left: $spacing-small;
+            text-transform: uppercase;
           }
 
           &-right {
-            border-left: 1px solid $black;
             padding-left: $spacing-small;
           }
         }
