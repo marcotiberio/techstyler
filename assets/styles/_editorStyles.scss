@@ -96,4 +96,18 @@
       color: $black;
     }
   }
+
+  blockquote,
+  .blockquote {
+    font-size: inherit;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-align: center;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -149,6 +149,7 @@
     .featuredImage {
       display: block;
       margin-bottom: 0;
+      position: relative;
 
       @media (max-width: $breakpoint-tablet) {
         margin-bottom: 0;
@@ -162,6 +163,17 @@
         @media (max-width: $breakpoint-mobile) {
           min-height: 250px;
         }
+      }
+
+      figcaption {
+        bottom: $spacing-small;
+        color: $white;
+        font-size: 0.6rem;
+        left: $spacing-small;
+        max-width: calc(100% - 30px);
+        mix-blend-mode: difference;
+        position: absolute;
+        width: fit-content;
       }
     }
   }

@@ -289,15 +289,12 @@ code {
 
 blockquote,
 .blockquote {
-  border-left: 4px solid $color-accent;
-  font-size: 1.125rem;
+  font-size: inherit;
   font-style: italic;
   font-weight: 400;
-  letter-spacing: 0.16px;
-  line-height: 1.55;
-  margin: 2.4rem auto;
-  max-width: 28rem;
-  padding: 0.8rem 1.5rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-align: center;
 
   p:last-child {
     margin-bottom: 0;

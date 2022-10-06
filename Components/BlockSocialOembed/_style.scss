@@ -1,0 +1,33 @@
+[is='flynt-block-social-oembed'] {
+  @media (max-width: $breakpoint-tablet) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container {
+    grid-column-end: 7;
+    grid-column-start: 3;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-column-end: 9;
+      grid-column-start: 1;
+    }
+
+    iframe {
+      background: $white !important;
+      border: 1px solid rgb(219, 219, 219) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      display: block !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      min-width: 326px !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+  }
+
+  .visualAudible__body {
+    display: none !important;
+  }
+}

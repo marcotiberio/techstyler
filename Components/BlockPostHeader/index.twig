@@ -61,7 +61,9 @@
         src="{{ post.thumbnail.src }}"
         data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
         data-sizes="auto">
-    </div>
+        {% if post.thumbnail.caption %}
+          <figcaption class="figure-caption">{{ post.thumbnail.caption }}</figcaption>
+        {% endif %}
     {% endif %}
   </div>
   </header>
