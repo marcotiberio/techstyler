@@ -28,6 +28,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockTextImageRepeater\getACFLayout(),
                     Components\BlockTextImageTwoCol\getACFLayout(),
                     Components\GridAllPosts\getACFLayout(),
+                    Components\GridPostsHomepage\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
                     Components\GridPostsPremium\getACFLayout(),
                     Components\GridPostsSelectorHome\getACFLayout(),

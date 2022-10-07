@@ -1,11 +1,6 @@
 {% if items|length > 0 %}
-  <div class="flyntComponent" is="flynt-grid-posts-latest">
+  <div class="flyntComponent" is="flynt-grid-posts-homepage">
     <div class="container grid8">
-      {% if post.category %}
-      <div class="preContent grid8">
-        <div class="sideTitle small">{{ labels.moreOn }} {{ post.category() }}</div>
-      </div>
-      {% endif %}
       <ul class="grid grid2">
         {% for item in items %}
           <li class="grid-item grid-item--{{ item.terms('format')|join(', ')|lower|replace({' ': '-'}) }}">
@@ -22,11 +17,6 @@
                   <span>{{ item.category() }}</span>
                   <span> / </span>
                   <span> {{ item.terms('format') | join(', ')  }} </span>
-                  {# {% for tag in item.terms('tag')  %}
-                    <span>{{ tag }}</span> #}
-                    {# <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li> #}
-                  {# {% endfor %} #}
-                  {# <span>{{ post.terms('tag') }}</span> #}
                 </div>
                 <div class="content-inner">
                   <h2 class="h2 post-title">{{ item.title }}</h2>

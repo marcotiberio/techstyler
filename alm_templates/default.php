@@ -1,4 +1,5 @@
-<div class="post post--<?php $categories = get_the_category(); if ( ! empty( $categories ) ) { echo esc_html( $categories[0]->name ); }?>" title="<?php the_title(); ?>">
+<div class="post post--<?php 
+    $terms = get_the_terms( $post->ID, 'format' ); foreach($terms as $term) { echo $term->slug; }?> post--<?php $categories = get_the_category(); if ( ! empty( $categories ) ) { echo esc_html( $categories[0]->slug ); }?>" title="<?php the_title(); ?>">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" aria-hidden="true" tabindex="-1">
         <div class="featuredImage">
             <?php the_post_thumbnail('large'); ?>

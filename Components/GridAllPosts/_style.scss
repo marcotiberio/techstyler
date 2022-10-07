@@ -408,6 +408,57 @@
     }
   }
 
+  .post {
+    &--expert-opinion {
+      img {
+        border-top: 10px solid $blue;
+      }
+    }
+
+    &--industry-deep-dive {
+      img {
+        border-top: 10px solid $green;
+      }
+    }
+
+    &--the-intel {
+      img {
+        border-top: 10px solid $lightgreen;
+      }
+    }
+
+    &--innovator-spotlight {
+      img {
+        border-top: 10px solid $lime;
+      }
+    }
+
+    &--two-truths {
+      img {
+        border-top: 10px solid $applegreen;
+      }
+    }
+
+    &--news-feature,
+    &--interview {
+      img {
+        border-top: 10px solid $orange;
+      }
+    }
+
+    &--report {
+      img {
+        border-top: 10px solid $eggshell;
+      }
+    }
+
+    &--state-of-play {
+      img {
+        border-top: 10px solid $blue;
+      }
+    }
+  }
+
   // .ajax-load-more-wrap.infinite.fading-blocks>.alm-btn-wrap .alm-load-more-btn {
   //   background-image: url('/wp-content/plugins/ajax-load-more/core/img/eclipse.gif');
   // }
