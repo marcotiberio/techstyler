@@ -451,6 +451,7 @@ button {
   line-height: inherit;
   padding: 0;
   text-align: inherit;
+  transition: all 0.2s linear;
 }
 
 .button {
@@ -484,18 +485,21 @@ button {
     background-color: transparent;
     border-color: $black;
     color: $black;
+    transition: all 0.2s linear;
   }
 
   &--ghost {
     background-color: transparent;
     border-color: $black;
     color: $black;
+    transition: all 0.2s linear;
 
     &:hover,
     &:focus {
       background-color: $black;
       border-color: $black;
       color: $white;
+      transition: all 0.2s linear;
     }
   }
 

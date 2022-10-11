@@ -1,27 +1,35 @@
 [is='flynt-block-newsletter'] {
   background-color: $lime;
 
-  .container {
-    @media (max-width: $breakpoint-mobile) {
-      display: block;
-    }
-  }
-
   .content {
     grid-column-end: 5;
     grid-column-start: 2;
+    
+    @media (max-width: $breakpoint-desktop) {
+      grid-column-end: 8;
+      grid-column-start: 2;
+    }
   }
 
   .newsletter {
     grid-column-end: 8;
     grid-column-start: 5;
 
+    @media (max-width: $breakpoint-desktop) {
+      grid-column-end: 8;
+      grid-column-start: 2;
+    }
+
     p {
       margin: 0;
     }
 
     .wpcf7 {
-      transform: translateY(-1rem);
+      transform: translateY(1rem);
+
+      @media (max-width: $breakpoint-mobile) {
+        transform: translateY(2rem);
+      }
 
       .col-2 {
         column-gap: $spacing-small;

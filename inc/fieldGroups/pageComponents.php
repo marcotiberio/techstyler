@@ -19,6 +19,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockLegalPage\getACFLayout(),
                     Components\BlockMembershipLevels\getACFLayout(),
+                    Components\BlockMembershipLevelsCustom\getACFLayout(),
                     Components\BlockNewsletter\getACFLayout(),
                     Components\BlockRepeaterColumns\getACFLayout(),
                     Components\BlockShortcode\getACFLayout(),

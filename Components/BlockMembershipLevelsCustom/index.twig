@@ -1,0 +1,15 @@
+<div class="flyntComponent flyntComponent--membership-levels-custom" {% if options.backgroundColor %} style="background-color: {{ options.backgroundColor }}" {% endif %} is="flynt-block-membership-levels-custom">
+  <div class="container grid8 boxed">
+    <div class="preContent">
+      <div class="left">{{ preContentHtml|e('wp_kses_post') }}</div>
+      <div class="right">{{ preContentRightHtml|e('wp_kses_post') }}</div>
+    </div>
+    <div class="content grid3">
+      {% for level in membershipLevels %}
+        <div class="level">
+          {{ level.membershipLevelHtml|e('wp_kses_custom') }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -95,6 +95,19 @@
       border-color: $black;
       color: $black;
     }
+
+    &--ghost {
+      background-color: transparent;
+      border-color: $black;
+      color: $black;
+  
+      &:hover,
+      &:focus {
+        background-color: $black;
+        border-color: $black;
+        color: $white;
+      }
+    }
   }
 
   blockquote,

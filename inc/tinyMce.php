@@ -162,11 +162,11 @@ function getConfig()
                         'classes' => 'button',
                         'selector' => 'a,button'
                     ],
-                    // [
-                    //     'title' => 'Button Ghost',
-                    //     'classes' => 'button--ghost',
-                    //     'selector' => '.button'
-                    // ],
+                    [
+                        'title' => 'Button Ghost',
+                        'classes' => 'button--ghost',
+                        'selector' => 'a,button'
+                    ],
                     // [
                     //     'title' => 'Button Small',
                     //     'classes' => 'button--small',

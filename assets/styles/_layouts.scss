@@ -34,6 +34,18 @@
   }
 }
 
+.grid3 {
+  column-gap: $spacing-large;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: $spacing-large;
+  width: 100%;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .grid4 {
   column-gap: $spacing-large;
   display: grid;
