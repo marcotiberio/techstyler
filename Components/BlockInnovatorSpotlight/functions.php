@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'blockInnovatorSpotlight',
-        'label' => 'Block: Innovator Spotlight',
+        'label' => 'Block: Innovator Spotlight (Repeater)',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),

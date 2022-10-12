@@ -21,7 +21,7 @@ function getACFLayout()
 {
     return [
         'name' => 'BlockPostObject',
-        'label' => 'Block: Innovator Spotlight Object',
+        'label' => 'Block: Innovator Spotlight',
         'sub_fields' => [
             [
                 'label' => __('Innovator Spotlight', 'flynt'),

@@ -64,7 +64,6 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockFootnotes\getACFLayout(),
                     Components\BlockImagePost\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
-                    Components\BlockInnovatorSpotlight\getACFLayout(),
                     Components\BlockPostHeader\getACFLayout(),
                     Components\BlockPostObject\getACFLayout(),
                     Components\BlockShortcode\getACFLayout(),
