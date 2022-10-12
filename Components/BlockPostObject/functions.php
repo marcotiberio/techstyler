@@ -21,15 +21,14 @@ function getACFLayout()
 {
     return [
         'name' => 'BlockPostObject',
-        'label' => 'Block: Post Object',
+        'label' => 'Block: Innovator Spotlight Object',
         'sub_fields' => [
             [
-                'label' => __('Post', 'flynt'),
+                'label' => __('Innovator Spotlight', 'flynt'),
                 'name' => 'post',
                 'type' => 'post_object',
                 'post_type' => [
-                    'post',
-                    'artist',
+                    'innovator',
                 ],
                 'allow_null' => 0,
                 'multiple' => 0,
@@ -37,7 +36,7 @@ function getACFLayout()
                 'ui' => 1,
                 'required' => 0,
                 'wrapper' => [
-                    'width' => '50',
+                    'width' => '100',
                 ],
             ]
         ]

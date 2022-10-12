@@ -31,6 +31,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridAllPosts\getACFLayout(),
                     Components\GridPostsHomepage\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
+                    Components\BlockPostObject\getACFLayout(),
                     Components\GridPostsPremium\getACFLayout(),
                     Components\GridPostsSelectorHome\getACFLayout(),
                     Components\HeroImageText\getACFLayout(),

@@ -1,0 +1,16 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article>
+    <div class="post-main">
+      <div class="content">
+        <div class="table">
+          <div class="row">
+            <span class="column-left">Company name</span>
+            <span class="column-right">{{ post.companyName }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+{% endblock %}
