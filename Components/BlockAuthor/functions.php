@@ -46,23 +46,7 @@ function getACFLayout()
                 'name' => 'authorJobtitle',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '33',
-                ],
-            ],
-            [
-                'label' => __('Organisation Type', 'flynt'),
-                'name' => 'authorOrganisationtype',
-                'type' => 'text',
-                'wrapper' => [
-                    'width' => '33',
-                ],
-            ],
-            [
-                'label' => __('Company', 'flynt'),
-                'name' => 'authorCompany',
-                'type' => 'text',
-                'wrapper' => [
-                    'width' => '33',
+                    'width' => '100',
                 ],
             ],
             [

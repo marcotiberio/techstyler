@@ -27,8 +27,8 @@
         column-gap: $spacing-large;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        line-height: 2rem;
-        // padding-bottom: $spacing-small/2;
+        padding-bottom: 5px;
+        padding-top: 6px;
         // row-gap: $spacing-large;
 
         &:first-child {
@@ -45,11 +45,14 @@
           &-left {
             font-family: 'NB International', sans-serif;
             font-size: 0.889rem;
+            // line-height: 1.5;
             padding-left: $spacing-small;
             text-transform: uppercase;
           }
 
           &-right {
+            font-size: 0.889rem;
+            // line-height: 1.5;
             padding-left: $spacing-small;
           }
         }
