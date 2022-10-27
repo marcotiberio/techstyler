@@ -79,7 +79,7 @@ function getACFLayout()
                 'type' => 'group',
                 'layout' => 'block',
                 'sub_fields' => [
-                    // FieldVariables\getSectionId(),
+                    FieldVariables\getSectionId(),
                     [
                         'label' => __('Background Color', 'flynt'),
                         'name' => 'backgroundColor',

@@ -11,7 +11,7 @@ $(document).ready(function () {
     // var hashWithoutDash = this.hash.replace('/', '') // remove dash from hash to make $(hashWithoutDash).offset() worked
 
     $('html, body').animate({
-      scrollTop: $(targetHref).offset().top - headerHeight // Add it to the calculation here
+      scrollTop: $(targetHref).offset().top - '120px' // Add it to the calculation here
     }, 500)
 
     e.preventDefault()
