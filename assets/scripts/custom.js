@@ -24,14 +24,21 @@ $(document).ready(function () {
   })
   $('.blackWhite').click(function () {
     $('html').toggleClass('high-contrast')
+    $('.blackWhite').toggleClass('active')
+    // $('.fontSizebigger').removeClass('active')
+    // $('.fontSizesmaller').removeClass('active')
   })
   $('.fontSizebigger').click(function () {
     $('html').toggleClass('font-bigger')
     $('html').removeClass('font-smaller')
+    $('.fontSizebigger').addClass('active')
+    $('.fontSizesmaller').removeClass('active')
   })
   $('.fontSizesmaller').click(function () {
     $('html').toggleClass('font-smaller')
     $('html').removeClass('font-bigger')
+    $('.fontSizesmaller').addClass('active')
+    $('.fontSizebigger').removeClass('active')
   })
 })
 

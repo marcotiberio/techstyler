@@ -1,0 +1,52 @@
+[is='flynt-block-maintenance'] {
+  .content {
+    background-color: $lime;
+    bottom: 110px;
+    font-family: 'PPRight Grotesk Bold', sans-serif;
+    font-size: 0.778rem;
+    padding: $spacing-large !important;
+    position: fixed;
+    right: $spacing-large;
+    text-transform: uppercase;
+    width: 30%;
+    z-index: 1011;
+
+    @media (max-width: $breakpoint-tablet) {
+      bottom: auto;
+      top: 85px;
+      width: calc(100% - 50px);
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .close {
+    align-items: center;
+    background-color: $lime;
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 24px;
+    z-index: 1012;
+
+    @media (max-width: $breakpoint-tablet) {
+      height: 14px;
+      right: 1.5vw;
+      top: 1.5vw;
+      width: 14px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 14px;
+      right: 2vw;
+      top: 2vw;
+      width: 14px;
+    }
+  }
+}

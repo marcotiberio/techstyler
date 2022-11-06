@@ -2,7 +2,12 @@
 
 {% block content %}
   <article class="post post--{{ post.terms('format')|join(', ')|lower }}">
-    {# {{ renderComponent('BlockPostHeader', { post: post }) }} #}
+    <section class="header-preview">
+      {{ renderComponent('BlockPostHeader', { post: post }) }}
+      <div class="grid8 boxed">
+        <div class="post-intro">{{ post.introHtml|e(('wp_kses_custom')) }}</div>
+      </div>
+    </section>
     {# <div class="memershipLevel boxed">{{ function('do_shortcode', '[membership level="4" show_noaccess="true"]') }}</div> #}
     {# <div class="memershipLevel boxed">{{ function('do_shortcode', '[membership_level]') }}</div> #}
     <div class="post-main">{{ post.content }}</div>

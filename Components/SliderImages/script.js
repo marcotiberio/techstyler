@@ -52,7 +52,7 @@ class SliderImages extends window.HTMLDivElement {
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 0
+          spaceBetween: 15
         },
         1024: {
           slidesPerView: 3,
