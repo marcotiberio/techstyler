@@ -15,6 +15,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\BlockHighlight\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockLegalPage\getACFLayout(),
@@ -40,6 +41,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\ListSocial\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                     Components\SliderImagesLanding\getACFLayout(),
+                    Components\SliderTestimonials\getACFLayout(),
                     Components\SliderText\getACFLayout(),
                     Components\SliderTextDropdown\getACFLayout(),
                 ]

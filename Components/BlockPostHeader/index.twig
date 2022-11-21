@@ -13,7 +13,15 @@
         <div class="row grid4">
           <sup class="left">Author</sup>
           <div class="right">
-            <span>{{post.author.name}}</span>
+            <span>{{ post.author.name }}</span>
+            {# <sup>( {{ post.author.name|length }} )</sup> #}
+            {# <sup>( {{ function('getPostCount') }} )</sup> #}
+          </div>
+        </div>
+        <div class="row grid4">
+          <sup class="left">Date</sup>
+          <div class="right">
+            <span>{{ post.date|date("d.m.Y")|escape('wp_kses_post') }}</span>
             {# <sup>( {{ post.author.name|length }} )</sup> #}
             {# <sup>( {{ function('getPostCount') }} )</sup> #}
           </div>
@@ -25,7 +33,7 @@
           </div>
         </div> #}
         {% if audioEmbed or function('do_shortcode', '[favorite_button]') %}
-        <div class="row grid4">
+        <div class="row grid4 options">
           <sup class="left">Options</sup>
           <div class="right">
             {% if audioEmbed %}
@@ -67,4 +75,7 @@
     {% endif %}
   </div>
   </header>
+  {# <div class="grid8 boxed">
+    <div class="post-intro">{{ post.introHtml|e(('wp_kses_custom')) }}</div>
+  </div> #}
 </div>

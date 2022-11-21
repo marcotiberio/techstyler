@@ -1,0 +1,123 @@
+[is='flynt-slider-testimonials'] {
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+    padding: $spacing-large;
+  }
+
+  .slider {
+    grid-column-end: 2;
+    grid-column-start: 1;
+    position: relative;
+    width: 100%;
+
+    &-item {
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+
+      @media (max-width: $breakpoint-tablet) {
+        height: 100%;
+      }
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+
+      &-inner {
+        display: flex;
+        flex-flow: column wrap;
+        height: calc(100% - 50px);
+        justify-content: space-between;
+        padding: $spacing-large;
+
+        .testimony {
+          &::before {
+            content: '“';
+            position: relative;
+          }
+
+          &::after {
+            content: '”';
+            position: relative;
+          }
+        }
+      }
+    }
+
+    &-button {
+      align-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 0.2s ease-out;
+      width: 20px;
+      z-index: 10;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: 40px;
+
+        &:hover,
+        &:focus {
+          border: 1px solid $white;
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &--prev {
+        left: 0;
+      }
+
+      &--next {
+        right: 0;
+      }
+
+      .feather {
+        color: $color-contrast;
+        height: auto;
+        top: 0;
+        width: 80%;
+
+        @media (max-width: $breakpoint-tablet - 1) {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .figure {
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+
+    &-image {
+      height: auto;
+      margin: 0 auto;
+      width: auto;
+    }
+
+    &-caption {
+      color: $color-text;
+      display: inline-block;
+      font-size: 0.8rem;
+      left: 0;
+      max-width: 450px;
+      padding: 0.25rem 0;
+      position: relative;
+      text-transform: uppercase;
+      top: 0;
+    }
+  }
+}

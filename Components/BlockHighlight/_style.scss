@@ -1,0 +1,16 @@
+[is='flynt-block-highlight'] {
+  .container {
+    grid-column-end: 7;
+    grid-column-start: 3;
+    padding: $spacing-large;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-column-end: 9;
+      grid-column-start: 1;
+    }
+  }
+  
+  .content {
+    @include reset-content-margins;
+  }
+}

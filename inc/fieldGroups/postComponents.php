@@ -22,7 +22,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'label' => __('', 'flynt'),
                 'name' => 'introHtml',
                 'type' => 'wysiwyg',
-                'tabs' => 'visual',
+                'tabs' => 'visual,text',
                 'delay' => 1,
                 'media_upload' => 0,
                 'required' => 0
@@ -71,6 +71,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockAuthor\getACFLayout(),
                     Components\BlockFootnotes\getACFLayout(),
+                    Components\BlockHighlight\getACFLayout(),
                     Components\BlockImagePost\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockPostHeader\getACFLayout(),

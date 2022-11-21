@@ -1,7 +1,7 @@
 {% if items|length > 0 %}
   <div class="flyntComponent" is="flynt-grid-posts-homepage">
     <div class="container grid8">
-      <ul class="grid grid2">
+      <ul class="grid grid3">
         {% for item in items %}
           <li class="grid-item grid-item--{{ item.terms('format')|join(', ')|lower|replace({' ': '-'}) }}">
             <div class="content">

@@ -72,9 +72,15 @@
     }
   }
 
-  .post-intro {
-    grid-column-end: 7;
-    grid-column-start: 3;
+  .header-preview {
+    .options {
+      display: none;
+    }
+    
+    .post-intro {
+      grid-column-end: 7;
+      grid-column-start: 3;
+    }
   }
 
   .post-main {

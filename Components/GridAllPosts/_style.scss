@@ -1,14 +1,14 @@
 [is='flynt-grid-all-posts'] {
-  margin-top: -85px;
+  margin-top: 0;
   padding: 0 0 $spacing-large*3 !important;
 
   @media (max-width: $breakpoint-mobile) {
-    margin-top: -30px;
+    margin-top: 0;
     padding: 0 0 $spacing-large !important;
   }
 
   @media (max-width: $breakpoint-tablet) {
-    margin-top: -30px;
+    margin-top: 0;
     padding: 0 0 $spacing-small*2 !important;
   }
 
@@ -230,8 +230,8 @@
   }
 
   .ajax-load-more-wrap {
-    grid-column-end: 8;
-    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-column-start: 1;
     margin: 0 auto;
     max-width: 1680px;
     padding: $spacing-large*3 $spacing-large/2;
@@ -257,7 +257,7 @@
     .css-grid {
       column-gap: $spacing-large;
       display: inline-grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       row-gap: $spacing-large*2;
 
       @media (max-width: $breakpoint-mobile) {

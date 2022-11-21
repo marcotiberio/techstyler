@@ -106,15 +106,18 @@ h2,
   }
 }
 
-// h3,
-// .h3 {
-//   font-size: 1.125rem;
-//   padding-top: 1rem;
+h3,
+.h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  padding-top: 0;
 
-//   @media (min-width: $breakpoint-mobile) {
-//     font-size: 1.25rem;
-//   }
-// }
+  @media (min-width: $breakpoint-mobile) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
 
 // h4,
 // .h4 {
@@ -823,9 +826,10 @@ html:not(.page-coming-soon) .mainContent {
 }
 
 .page-home .mainContent,
-.home .mainContent {
+.home .mainContent,
+.page-intel-database .mainContent {
   flex: 1 0 auto;
-  margin-top: 100px !important;
+  margin-top: 118px !important;
 
   @media (max-width: $breakpoint-tablet) {
     margin-top: 70px !important;

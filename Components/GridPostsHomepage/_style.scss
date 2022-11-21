@@ -28,8 +28,8 @@
   
   .grid {
     @include reset-list;
-    grid-column-end: 8;
-    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-column-start: 1;
     margin: 0 auto;
     max-width: 1680px;
     padding: $spacing-large*3 $spacing-small/2;

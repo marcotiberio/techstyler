@@ -1,0 +1,16 @@
+<div class="flyntComponent boxed grid8" {% if options.backgroundColor %} is="flynt-block-highlight">
+  <div class="container" style="background-color: {{ options.backgroundColor }}" {% endif %}>
+    <div class="content">
+      {% if contentHtml %}
+        {{ contentHtml|e('wp_kses_post') }}
+      {% endif %}
+      {% if buttonLink.url %}
+        <p>
+          <a href="{{ buttonLink.url }}"{% if buttonLink.target %} target="{{ buttonLink.target }}" rel="noreferrer noopener"{% endif %} class="button button--ghost">
+            {{ buttonLink.title|e }}
+          </a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>
