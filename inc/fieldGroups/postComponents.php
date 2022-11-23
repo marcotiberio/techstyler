@@ -18,6 +18,11 @@ add_action('Flynt/afterRegisterComponents', function () {
             //     'placement' => 'top',
             //     'endpoint' => 0
             // ],
+            [    
+                'label' => __('Author', 'flynt'),
+                'name' => 'authorCustom',
+                'type' => 'text'
+            ],
             [
                 'label' => __('', 'flynt'),
                 'name' => 'introHtml',

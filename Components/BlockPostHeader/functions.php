@@ -16,11 +16,6 @@ function getACFLayout()
         'label' => 'Block: Post Header',
         'sub_fields' => [
             [    
-                'label' => __('Author', 'flynt'),
-                'name' => 'authorCustom',
-                'type' => 'text'
-            ],
-            [    
                 'label' => __('Listen', 'flynt'),
                 'name' => 'audioEmbed',
                 'type' => 'wysiwyg',
