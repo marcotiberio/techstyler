@@ -80,6 +80,14 @@
     .post-intro {
       grid-column-end: 7;
       grid-column-start: 3;
+
+      .sans {
+        margin: 0 0 2.25rem;
+
+        &:last-child {
+          margin: 0 0 2.25rem;
+        }
+      }
     }
   }
 
