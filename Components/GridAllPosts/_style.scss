@@ -459,7 +459,44 @@
     }
   }
 
-  // .ajax-load-more-wrap.infinite.fading-blocks>.alm-btn-wrap .alm-load-more-btn {
-  //   background-image: url('/wp-content/plugins/ajax-load-more/core/img/eclipse.gif');
+  .alm-load-more-btn {
+    appearance: none !important;
+    background-color: $white !important;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: contain;
+    border: 1px solid $black !important;
+    border-radius: 0 !important;
+    color: $black !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-family: 'NB International', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    height: fit-content !important;
+    line-height: inherit !important;
+    padding: $spacing-small $spacing-large !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    transition: all 0.2s linear !important;
+    user-select: none !important;
+
+    &:hover,
+    &:focus {
+      background-color: $black !important;
+      border-color: $black !important;
+      color: $white !important;
+      transition: all 0.2s linear !important;
+    }
+  }
+
+  // .alm-load-more-btn.loading {
+  //   background-color: $white;
+  //   background-image: url('/wp-content/uploads/2022/11/Logo_Loading.gif');
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: center;
+  //   color: $white !important;
   // }
 }

@@ -1,12 +1,13 @@
-<div class="flyntComponent" is="flynt-hero-image-text">
+<div class="flyntComponent grid8 boxed" {% if options.backgroundColor %} style="background-color: {{ options.backgroundColor }}" {% endif %} is="flynt-hero-image-text">
+  {% if posterImage %}
   <figure class="figure">
     <img class="figure-image lazyload"
-      src="{{ posterImage.src|resizeDynamic(1280, 720) }}"
-      srcset="{{ placeholderImage(1280, 720) }}"
-      data-srcset="{{ function('wp_get_attachment_image_srcset', posterImage.id) }}"
+      src="{{ posterImage.src|resize(32) }}"
+      data-srcset="{{function('wp_get_attachment_image_srcset', posterImage.id)}}"
       data-sizes="auto"
       alt="{{ posterImage.alt|e }}">
   </figure>
+  {% endif %}
   {% if contentHtml %}
     <div class="content">
       <div class="content-inner">
