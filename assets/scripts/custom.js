@@ -68,14 +68,14 @@ $(document).ready(function () {
 
 // Level 6
 $('#pmpro_level-6 #pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text($('#pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text().replace('Would you like to set up automatic renewals?', 'My membership will automatically renew at £120.00 every 3 months.'))
-$('#pmpro_level-6 .pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text($('.pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text().replace('Yes, renew at £120.00 every 6 months.', 'I understand I can cancel at any time from my membership portal.'))
+$('#pmpro_level-6 .pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text('Yes')
 
 // Level 7
 $('#pmpro_level-7 #pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text($('#pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text().replace('Would you like to set up automatic renewals?', 'My membership will automatically renew at £200.00 every 6 months.'))
-$('#pmpro_level-7 .pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text($('.pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text().replace('Yes, renew at £200.00 every 6 months.', 'I understand I can cancel at any time from my membership portal.'))
+$('#pmpro_level-7 .pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text('Yes')
 
 // Level 8
 $('#pmpro_level-8 #pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text($('#pmpro_autorenewal_checkbox .pmpro_checkout-h3-name').text().replace('Would you like to set up automatic renewals?', 'My membership will automatically renew at £360.00 every year.'))
-$('#pmpro_level-8 .pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text($('.pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text().replace('Yes, renew at £360.00 every year.', 'I understand I can cancel at any time from my membership portal.'))
+$('#pmpro_level-8 .pmpro_checkout_field-autorenew .pmprorh_checkbox_label').text('Yes')
 
 $('.pmpro_login_wrap .pmpro_actions_nav a').text($('.pmpro_login_wrap .pmpro_actions_nav a').text().replace('Lost Password?', 'Forgot Password?'))
