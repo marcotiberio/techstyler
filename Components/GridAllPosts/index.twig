@@ -8,10 +8,10 @@
     <div class="filterSection">
       <div class="filterSection--inner grid8">
         <div class="content content-title sectionId small">{{ options.sectionId }}</div>
-        {{ function('do_shortcode', '[ajax_load_more_filters target="Home" filters="true" filters_url="true" id="topic"]') }}
+        {{ function('do_shortcode', '[ajax_load_more_filters target="home" filters="true" filters_url="true" id="topic"]') }}
         <div class="filterSection--empty"></div>
       </div>
     </div>
-    {{ function('do_shortcode', '[ajax_load_more target="topic" filters="true" id="Home" scroll_distance="1000" container_type="div" css_classes="grid" post_type="post" posts_per_page="12" images_loaded="true" transition_container_classes="css-grid" order="ASC" orderby="menu_order" button_loading_label="Loading..." no_results_text="No results...]') }}
+    {{ function('do_shortcode', '[ajax_load_more target="topic" filters="true" id="home" scroll_distance="1000" container_type="div" css_classes="grid" post_type="post" posts_per_page="12" images_loaded="true" transition_container_classes="css-grid" order="ASC" orderby="menu_order" button_loading_label="Loading..." no_results_text="No results...]') }}
   </div>
 </div>
